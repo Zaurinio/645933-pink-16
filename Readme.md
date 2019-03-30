@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Заур Хутинаев](https://up.htmlacademy.ru/adaptive/16/user/645933).
-* Наставник: Максим Фарига.
+* Наставник: [Максим Фарига](https://htmlacademy.ru/profile/id6090).
 
 ---
 
