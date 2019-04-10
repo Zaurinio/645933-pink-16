@@ -1,0 +1,7 @@
+.site-list__link {
+  font-family: $open-sans;
+
+  @include text-set (18px, 32px, 700);
+  color: #ffffff;
+  text-decoration: none;
+}

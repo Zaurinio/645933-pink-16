@@ -1,0 +1,23 @@
+.downloading {
+  background-color: $downloading-bg;
+}
+
+.downloading__link {
+  font-family: $open-sans;
+
+  @include text-set(18px, 18px, 700);
+  color: #ffffff;
+  text-decoration: none;
+  min-width: 280px;
+  padding: 17px 30px 15px;
+  border: 3px solid #ffffff;
+  border-radius: 26px;
+  display: inline-block;
+}
+
+.downloading__description {
+  font-family: $open-sans;
+
+  @include text-set(14px, 24px, 300);
+  color: #ffffff;
+}

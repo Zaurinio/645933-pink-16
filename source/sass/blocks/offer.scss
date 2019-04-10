@@ -1,0 +1,7 @@
+.offer__slogan {
+  @include text-set ($size: 24px, $height: 24px, $weight: 300);
+}
+
+.offer__list {
+  @include space-reset;
+}

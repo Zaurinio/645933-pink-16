@@ -1,0 +1,11 @@
+.banner {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  padding-top: 35px;
+  padding-bottom: 87px;
+}
+
+.banner__text {
+  @include text-set (24px, 24px, 300);
+  color: #ffffff;
+}

@@ -1,0 +1,7 @@
+.photos__slogan {
+  @include text-set (14px, 30px, 400);
+}
+
+.photos__list {
+  @include space-reset;
+}
