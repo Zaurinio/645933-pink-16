@@ -1,0 +1,27 @@
+.posts__author {
+  font: 700 14px/24px $open-sans;
+  font-style: normal;
+}
+
+.posts__time {
+  font: 300 14px/24px $open-sans;
+  text-transform: uppercase;
+}
+
+.posts__text {
+  @include space-reset;
+}
+
+.posts__item {
+  background-color: #f2f2f2;
+}
+
+.posts__likes {
+  background-color: inherit;
+  border: none;
+  text-transform: uppercase;
+
+  @include space-reset;
+  font: 400 12px/24px $open-sans;
+  color: #d22856;
+}
