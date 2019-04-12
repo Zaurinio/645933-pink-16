@@ -3,9 +3,7 @@
 }
 
 .downloading__link {
-  font-family: $open-sans;
-
-  @include text-set(18px, 18px, 700);
+  font: 700 18px/1 $open-sans;
   color: #ffffff;
   text-decoration: none;
   min-width: 280px;
@@ -16,8 +14,6 @@
 }
 
 .downloading__description {
-  font-family: $open-sans;
-
-  @include text-set(14px, 24px, 300);
+  font: 300 14px/24px $open-sans;
   color: #ffffff;
 }

@@ -1,5 +1,5 @@
 .offer__slogan {
-  @include text-set ($size: 24px, $height: 24px, $weight: 300);
+  font: 300 24px/1 $open-sans;
 }
 
 .offer__list {

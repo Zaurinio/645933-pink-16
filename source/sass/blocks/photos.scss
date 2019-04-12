@@ -1,5 +1,5 @@
 .photos__slogan {
-  @include text-set (14px, 30px, 400);
+  font: 400 14px/30px $open-sans;
 }
 
 .photos__list {

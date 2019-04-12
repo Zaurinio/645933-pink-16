@@ -1,10 +1,10 @@
 .posts__author {
-  @include text-set (14px, 24px, 700);
+  font: 700 14px/24px $open-sans;
   font-style: normal;
 }
 
 .posts__time {
-  @include text-set (14px, 24px, 300);
+  font: 300 14px/24px $open-sans;
   text-transform: uppercase;
 }
 
@@ -22,6 +22,6 @@
   text-transform: uppercase;
 
   @include space-reset;
-  @include text-set (12px, 24px, 400);
+  font: 400 12px/24px $open-sans;
   color: #d22856;
 }

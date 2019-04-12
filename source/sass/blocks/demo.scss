@@ -1,7 +1,6 @@
 .demo {
-  background-image: url("../img/iphone-hand-mobile@1x.png"),
-    url("../img/bg-back-mobile@1x.jpg");
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat,
+    url("../img/bg-back-mobile@1x.jpg") no-repeat;
   height: 396px;
-  background-repeat: no-repeat, no-repeat;
   background-position: left bottom, left bottom;
 }
