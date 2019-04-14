@@ -1,5 +1,23 @@
 .downloading {
   background-color: $downloading-bg;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.downloading__wrapper {
+  @include wrapper-mb;
+}
+
+.downloading__button {
+  margin: 0;
+}
+
+.downloading__slogan {
+  display: none;
+  margin: 0;
+  font: 300 40px/1 $open-sans;
+  color: #ffffff;
+  text-align: center;
 }
 
 .downloading__link {
@@ -13,7 +31,54 @@
   display: inline-block;
 }
 
+.downloading__list {
+  @include space-reset;
+  list-style: none;
+}
+
 .downloading__description {
   font: 300 14px/24px $open-sans;
   color: #ffffff;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .downloading {
+    width: 100%;
+    padding-top: 103px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
+    background-position: left bottom;
+  }
+
+  .downloading__wrapper {
+    @include wrapper-tb;
+    background: url("../img/iphone-hand-tablet@1x.png") no-repeat;
+    background-position: -40px bottom;
+    // для сетки
+    min-height: 620px;
+  }
+
+  .downloading__slogan {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .downloading {
+    width: 100%;
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
+    background-position: left bottom;
+  }
+
+  .downloading__wrapper {
+    @include wrapper-dt;
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat;
+    background-position: -25px bottom;
+    // для сетки
+    min-height: 745px;
+  }
+
+  .downloading__slogan {
+    display: inline;
+  }
 }

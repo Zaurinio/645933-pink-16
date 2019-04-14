@@ -1,0 +1,42 @@
+.effect {
+  display: none;
+}
+
+.effect__picture {
+  @include space-reset;
+}
+
+.effect__link {
+  color: #d22856;
+}
+
+@media (min-width: $tablet-width) {
+  .effect {
+    display: block;
+    width: 100%;
+  }
+
+  .effect__wrapper {
+    display: flex;
+
+    @include wrapper-tb;
+  }
+
+  .effect__slogan {
+    font: 700 30px/36px $open-sans;
+    color: #000000;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .effect__wrapper {
+    display: flex;
+
+    @include wrapper-dt;
+  }
+
+  .effect__slogan {
+    font: 700 30px/1 $open-sans;
+    color: #000000;
+  }
+}

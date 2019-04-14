@@ -1,3 +1,46 @@
 .page-header {
   background-color: $header-bg;
+  width: 320px;
+  margin: 0 auto;
+  // для сетки
+  min-height: 325px;
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__wrapper {
+  @include wrapper-mb;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: 100%;
+    // для сетки
+    min-height: 365px;
+  }
+
+  .page-header__wrapper {
+    @include wrapper-tb;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 100%;
+    // для сетки
+    min-height: 110px;
+  }
+
+  .page-header__wrapper {
+    @include wrapper-dt;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
 }

@@ -8,3 +8,20 @@
   line-height: $height;
   font-weight: $weight;
 }
+
+@mixin wrapper-mb {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@mixin wrapper-tb {
+  width: 620px;
+  margin: 0 auto;
+}
+
+@mixin wrapper-dt {
+  width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+}

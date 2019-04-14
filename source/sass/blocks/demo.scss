@@ -2,5 +2,13 @@
   background: url("../img/iphone-hand-mobile@1x.png") no-repeat,
     url("../img/bg-back-mobile@1x.jpg") no-repeat;
   height: 396px;
+  width: 320px;
+  margin: 0 auto;
   background-position: left bottom, left bottom;
+}
+
+@media (min-width: $tablet-width) {
+  .demo {
+    display: none;
+  }
 }

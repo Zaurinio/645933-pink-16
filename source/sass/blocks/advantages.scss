@@ -1,3 +1,46 @@
 .advantages__title {
   font: 700 18px/1 $open-sans;
 }
+
+@media (min-width: $desktop-width) {
+  .advantages__item {
+    padding-top: 360px;
+    position: relative;
+  }
+
+  .advantages__description--mood::before {
+    content: "";
+    width: 292px;
+    height: 302px;
+    background: url("../img/iphone-screen-1-desktop@1x.png") no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .advantages__description--modify::before {
+    content: "";
+    width: 292px;
+    height: 302px;
+    background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .advantages__description--friendship::before {
+    content: "";
+    width: 292px;
+    height: 302px;
+    background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
