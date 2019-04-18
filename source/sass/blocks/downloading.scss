@@ -1,11 +1,20 @@
 .downloading {
   background-color: $downloading-bg;
-  width: 320px;
-  margin: 0 auto;
+
+
+  &::before {
+    content: "";
+    display: block;
+    background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+    height: 396px;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .downloading__wrapper {
   @include wrapper-mb;
+  min-height: 270px;
 }
 
 .downloading__button {
@@ -28,12 +37,15 @@
   padding: 17px 30px 15px;
   border: 3px solid #ffffff;
   border-radius: 26px;
-  display: inline-block;
+  display: block;
 }
 
 .downloading__list {
   @include space-reset;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .downloading__description {
@@ -60,6 +72,14 @@
 
   .downloading__slogan {
     display: inline;
+  }
+
+  .downloading::before {
+    display: none;
+  }
+
+  .downloading__content {
+    width: 300px;
   }
 }
 
