@@ -22,8 +22,7 @@
   .effect__wrapper {
     @include wrapper-tb;
     display: flex;
-    position: relative;
-    padding-left: 300px;
+    justify-content: space-between;
   }
 
   .effect__slogan {
@@ -31,16 +30,14 @@
     color: #000000;
   }
 
-  .effect__content::before {
+  .effect__wrapper::before {
     content: "";
     width: 240px;
     height: 276px;
     background: url("../img/icon-timer.svg") no-repeat;
     display: block;
-    position: absolute;
     background-size: contain;
-    left: 0;
-    top: 0;
+    flex-shrink: 0;
   }
 }
 
@@ -48,7 +45,6 @@
   .effect__wrapper {
     @include wrapper-dt;
     display: flex;
-    padding-left: 365px;
   }
 
   .effect__slogan {

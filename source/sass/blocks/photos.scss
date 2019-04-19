@@ -1,6 +1,5 @@
 .photos {
-  width: 320px;
-  margin: 0 auto;
+  overflow: hidden;
   // для сетки
   min-height: 2482px;
 }
@@ -25,9 +24,7 @@
 // }
 
 .posts__picture {
-  position: relative;
   display: block;
-  height: auto;
 }
 
 .posts__panorama {
