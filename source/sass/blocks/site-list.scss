@@ -1,5 +1,21 @@
+.site-list {
+  @include space-reset;
+  list-style: none;
+}
+
 .site-list__link {
   font: 700 18px/32px $open-sans;
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 700px;
+    display: flex;
+  }
+
+  .site-list__item:not(:last-child) {
+    margin-right: 81px;
+  }
 }

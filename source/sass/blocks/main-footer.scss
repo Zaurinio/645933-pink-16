@@ -1,3 +1,25 @@
 .main-footer__list {
   @include space-reset;
 }
+
+.main-footer__wrapper {
+  @include wrapper-mb;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__wrapper {
+    @include wrapper-tb;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-footer__license {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__wrapper {
+    @include wrapper-dt;
+  }
+}

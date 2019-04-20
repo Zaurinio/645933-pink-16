@@ -1,3 +1,35 @@
 .advantages__title {
   font: 700 18px/1 $open-sans;
 }
+
+@media (min-width: $desktop-width) {
+  .advantages__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 292px;
+      height: 302px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &--mood {
+      &::before {
+        background: url("../img/iphone-screen-1-desktop@1x.png") no-repeat;
+      }
+    }
+
+    &--modify {
+      &::before {
+        background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat;
+      }
+    }
+
+    &--friendship {
+      &::before {
+        background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
+      }
+    }
+  }
+}

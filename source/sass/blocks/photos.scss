@@ -1,7 +1,116 @@
+.photos {
+  overflow: hidden;
+  // для сетки
+  min-height: 2482px;
+}
+
+.photos__wrapper {
+  @include wrapper-mb;
+}
+
 .photos__slogan {
   font: 400 14px/30px $open-sans;
+  text-align: center;
 }
 
 .photos__list {
   @include space-reset;
+  list-style: none;
+}
+
+// .posts__item {
+//   padding: 0 10px;
+//   margin: 0 -10px;
+// }
+
+.posts__picture {
+  display: block;
+}
+
+.posts__panorama {
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.posts__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .photos {
+    width: 100%;
+    // для сетки
+    min-height: 2313px;
+  }
+
+  .photos__wrapper {
+    @include wrapper-tb;
+  }
+
+  .posts__panorama {
+    height: 510px;
+  }
+
+  .photos__list {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  .posts__item:nth-child(2n) {
+    margin-right: 20px;
+  }
+
+
+  .posts__item:first-child {
+    width: 620px;
+  }
+
+  .posts__item:not(:first-child) {
+    width: 300px;
+  }
+
+  .posts__image {
+    height: 300px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photos {
+    width: 100%;
+    // для сетки
+    min-height: 2060px;
+  }
+
+  .photos__wrapper {
+    @include wrapper-dt;
+  }
+
+  .posts__panorama {
+    height: 506px;
+  }
+
+  .posts__item:first-child {
+    width: 960px;
+  }
+
+  .posts__item:not(:first-child) {
+    width: 300px;
+  }
+
+  .posts__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .posts__item:not(:nth-child(3n+1)) {
+    margin-right: 20px;
+  }
+
+  .posts__image {
+    height: 400px;
+  }
 }

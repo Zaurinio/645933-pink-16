@@ -1,7 +1,79 @@
+.offer {
+  // для сетки
+  min-height: 1002px;
+}
+
+.offer__wrapper {
+  @include wrapper-mb;
+}
+
 .offer__slogan {
   font: 300 24px/1 $open-sans;
+  text-align: center;
 }
 
 .offer__list {
   @include space-reset;
+  list-style: none;
+  text-align: center;
+}
+
+.offer__list::after {
+  content: "";
+  width: 157px;
+  height: 320px;
+  background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .offer__wrapper {
+    @include wrapper-tb;
+    // для сетки
+    min-height: 725px;
+  }
+
+  .offer__list {
+    padding-left: 310px;
+    text-align: left;
+    position: relative;
+  }
+
+  .offer__list::before {
+    content: "";
+    width: 268px;
+    height: 481px;
+    background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat;
+    position: absolute;
+    left: 0;
+  }
+
+  .offer__list::after {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer {
+    // для сетки
+    min-height: 880px;
+  }
+
+  .offer__wrapper {
+    @include wrapper-dt;
+    // для сетки
+    min-height: 880px;
+  }
+
+  .offer__list::before,
+  .offer__list::after {
+    display: none;
+  }
+
+  .offer__list {
+    display: flex;
+    padding: 0;
+    text-align: center;
+  }
 }

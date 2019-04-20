@@ -1,3 +1,4 @@
+// @import "normalize";
 @import "mixins";
 @import "variables";
 @import "overhead-style";
@@ -8,6 +9,7 @@
 @import "blocks/downloading";
 @import "blocks/platforms";
 @import "blocks/offer";
+@import "blocks/effect";
 @import "blocks/advantages";
 @import "blocks/banner";
 @import "blocks/photos";

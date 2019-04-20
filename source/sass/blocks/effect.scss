@@ -1,0 +1,59 @@
+.effect {
+  display: none;
+}
+
+.effect__wrapper {
+  @include wrapper-mb;
+}
+
+.effect__picture {
+  @include space-reset;
+}
+
+.effect__link {
+  color: #d22856;
+}
+
+@media (min-width: $tablet-width) {
+  .effect {
+    display: block;
+  }
+
+  .effect__wrapper {
+    @include wrapper-tb;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .effect__slogan {
+    font: 700 30px/36px $open-sans;
+    color: #000000;
+  }
+
+  .effect__wrapper::before {
+    content: "";
+    width: 240px;
+    height: 276px;
+    background: url("../img/icon-timer.svg") no-repeat;
+    display: block;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .effect__wrapper {
+    @include wrapper-dt;
+    display: flex;
+  }
+
+  .effect__slogan {
+    font: 700 30px/1 $open-sans;
+    color: #000000;
+  }
+
+  .effect__content::before {
+    width: 300px;
+    height: 345px;
+  }
+}
