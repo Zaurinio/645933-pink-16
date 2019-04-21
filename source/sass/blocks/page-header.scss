@@ -32,7 +32,7 @@
   z-index: 5;
 }
 
-.main-navigation--closed~.page-header__top {
+.main-navigation--closed ~ .page-header__top {
   border-bottom: none;
 }
 
@@ -122,7 +122,7 @@
     height: 109px;
   }
 
-  .main-navigation--closed~.page-header__top {
+  .main-navigation--closed ~ .page-header__top {
     height: 109px;
   }
 }
