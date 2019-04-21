@@ -1,3 +1,29 @@
 .main-navigation {
   background-color: inherit;
+  z-index: 5;
+}
+
+.main-navigation__list {
+  list-style: none;
+}
+
+@media (max-width: $tablet-width-only) {
+  .main-navigation--closed .site-list {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation {
+    width: 700px;
+    display: flex;
+  }
+
+  .main-navigation__list {
+    display: flex;
+  }
 }
