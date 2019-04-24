@@ -1,19 +1,47 @@
+.posts__item {
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.posts__banner {
+  position: absolute;
+  font: 700 12px/24px $open-sans;
+  color: #ffffff;
+  display: inline-block;
+  padding: 7px 20px 5px;
+  margin: 0;
+  background-color: #d22856;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+}
+
+.posts__content {
+  padding: 20px 18px 22px;
+}
+
 .posts__author {
   font: 700 14px/24px $open-sans;
   font-style: normal;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .posts__time {
-  font: 300 14px/24px $open-sans;
+  font: 300 12px/24px $open-sans;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 3px;
+  display: inline-block;
 }
 
 .posts__text {
   @include space-reset;
+  margin-bottom: 10px;
 }
 
-.posts__item {
-  background-color: #f2f2f2;
+.posts__item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .posts__likes {
@@ -24,4 +52,109 @@
   @include space-reset;
   font: 400 12px/24px $open-sans;
   color: #d22856;
+
+  &::before {
+    content: "";
+    width: 13px;
+    height: 12px;
+    background: url("../img/icon-heart.svg") no-repeat;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin-right: 19px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .posts__item:nth-child(2n) {
+    margin-right: 20px;
+  }
+
+  .posts__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .posts__item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 20px;
+  }
+
+  .posts__content {
+    padding: 25px 27px 24px;
+    min-height: 155px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .posts__content--panorama {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .posts__content-wrapper {
+    width: 50%;
+  }
+
+  .posts__text {
+    margin-bottom: 0;
+  }
+
+  .posts__text--panorama {
+    order: 4;
+  }
+
+  .posts__item:first-child {
+    margin-bottom: 50px;
+  }
+
+  .posts__likes {
+    position: relative;
+    width: 100%;
+    text-align: left;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 13px;
+      height: 12px;
+      background: url("../img/icon-heart.svg") no-repeat;
+      position: absolute;
+      right: 0;
+      top: 4px;
+    }
+
+    &--panorama {
+      width: 50%;
+      text-align: right;
+      padding-right: 60px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .posts__content--panorama {
+    min-height: 120px;
+  }
+
+  .posts__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .posts__item:not(:nth-child(3n+1)) {
+    margin-right: 20px;
+  }
+
+  .posts__item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 0;
+  }
+
+  .posts__item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 20px;
+  }
 }

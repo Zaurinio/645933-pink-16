@@ -36,6 +36,8 @@
   }
 
   .site-list__link {
+    font: 400 18px/18px $open-sans;
+    text-transform: capitalize;
     display: inline-block;
     border: none;
     margin: 0;
