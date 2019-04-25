@@ -1,9 +1,8 @@
 .banner {
+  margin-top: -66px;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat  50% 0;
-  padding: 35px 0 87px;
+  padding: 100px 0 87px;
   background-size: cover;
-  // для сетки
-  min-height: 170px;
 }
 
 .banner__wrapper {
@@ -15,13 +14,19 @@
   font: 300 24px/24px $open-sans;
   color: #ffffff;
   text-align: center;
+  margin: 0;
 }
 
 @media (min-width: $tablet-width) {
   .banner {
+    margin-top: -110px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
-    // для сетки
-    min-height: 330px;
+    padding: 190px 0 150px;
+  }
+
+  .banner__text {
+    font: 300 50px/50px $open-sans;
+    margin: 0;
   }
 
   .banner__wrapper {
@@ -32,8 +37,6 @@
 @media (min-width: $desktop-width) {
   .banner {
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
-    // для сетки
-    min-height: 285px;
   }
 
   .banner__wrapper {

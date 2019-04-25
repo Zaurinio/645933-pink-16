@@ -4,10 +4,29 @@
 
 .effect__wrapper {
   @include wrapper-mb;
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 104px;
+}
+
+.effect__content {
+  width: 310px;
+  padding-top: 43px;
+  padding-right: 10px;
 }
 
 .effect__picture {
   @include space-reset;
+}
+
+.effect__slogan {
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.effect__description {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .effect__link {
@@ -30,21 +49,46 @@
     color: #000000;
   }
 
-  .effect__wrapper::before {
-    content: "";
-    width: 240px;
-    height: 276px;
-    background: url("../img/icon-timer.svg") no-repeat;
+  .effect__wrapper::after {
+    content: "24";
     display: block;
-    background-size: contain;
+    position: absolute;
+    text-align: center;
+    font: 700 96px/149.47px $open-sans;
+    color: #d22856;
+    border: 14px solid #d22856;
+    border-radius: 50%;
+    height: 202px;
+    width: 202px;
     flex-shrink: 0;
+    left: 39px;
+    top: 111px;
+    z-index: 5;
   }
 }
 
+.effect__wrapper::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 240px;
+  height: 275px;
+  background: url("../img/icon-timer.svg") no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  top: 0;
+  left: 0;
+}
+
 @media (min-width: $desktop-width) {
+  .effect {
+    background-color: #f2f2f2;
+  }
+
   .effect__wrapper {
     @include wrapper-dt;
     display: flex;
+    padding-top: 68px;
   }
 
   .effect__slogan {
@@ -52,8 +96,27 @@
     color: #000000;
   }
 
+  .effect__content {
+    padding-top: 97px;
+    width: 532px;
+    font: 400 18px/30px $open-sans;
+  }
+
   .effect__content::before {
-    width: 300px;
+    width: 298px;
     height: 345px;
+  }
+
+  .effect__wrapper::before {
+    height: 345px;
+    width: 300px;
+  }
+
+  .effect__wrapper::after {
+    height: 253px;
+    width: 253px;
+    left: 32px;
+    top: 137.5px;
+    font: 700 120px/186.9px $open-sans;
   }
 }

@@ -1,3 +1,5 @@
-.platforms {
-  @include space-reset;
+.platforms__link {
+  display: block;
+  vertical-align: top;
+  max-width: 100%;
 }
