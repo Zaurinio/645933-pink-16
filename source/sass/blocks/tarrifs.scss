@@ -1,0 +1,143 @@
+.tariffs {
+  background-color: #f2f2f2;
+}
+
+.tariffs__wrapper {
+  // @include wrapper-mb;
+  padding-top: 66px;
+  padding-bottom: 99px;
+  overflow: hidden;
+}
+
+.tariffs__list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tariffs__list th,
+.tariffs__list td {
+  position: relative;
+}
+
+.tariffs__mobile-list {
+  width: 100%;
+  overflow: hidden;
+  table-layout: fixed;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tarrifs__type,
+.tariffs__details {
+  border: 2px solid #e7e7e7;
+  background-color: #ffffff;
+}
+
+.tariffs__details--yes {
+  &::before {
+    content: "";
+    width: 31px;
+    height: 21px;
+    background: url("../img/icon-yes.svg") no-repeat;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+  }
+}
+
+.tariffs__details--no {
+  &::before {
+    content: "";
+    width: 27px;
+    height: 26px;
+    background: url("../img/icon-no.svg") no-repeat;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.tariffs__header {
+  color: #ffffff;
+  background-color: #283645;
+  padding: 19px 70px 20px;
+  font: 300 24px/30px $open-sans;
+  text-transform: uppercase;
+
+  &--empty {
+    background-color: transparent;
+  }
+}
+
+.tariffs__header span {
+  font: 700 18px/30px $open-sans;
+}
+
+.tarrifs__type {
+  padding: 14px 24px 16px;
+  font: 400 14px/30px $open-sans;
+  color: #283645;
+  text-transform: uppercase;
+}
+
+.tariffs__header:nth-child(3) {
+  border-left: 2px solid #e7e7e7;
+  border-right: 2px solid #e7e7e7;
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs__wrapper {
+    @include wrapper-tb;
+    margin: 0 auto;
+    padding-top: 38px;
+    padding-bottom: 68px;
+  }
+
+  .tariffs__mobile-list {
+    display: none;
+  }
+
+  .tariffs__header {
+    font: 300 18px/30px $open-sans;
+    padding: 14px 30px 10px;
+  }
+
+  .tariffs__header span {
+    font: 700 16px/30px $open-sans;
+  }
+
+  .tarrifs__type {
+    text-transform: none;
+    padding: 9px 15px 7px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .tariffs__wrapper {
+    @include wrapper-dt;
+    margin: 0 auto;
+    padding-top: 66px;
+    padding-bottom: 95px;
+  }
+
+  .tariffs__header {
+    font: 300 24px/30px $open-sans;
+    padding: 19px 50px 20px;
+  }
+
+  .tariffs__header span {
+    font: 700 18px/30px $open-sans;
+  }
+
+  .tarrifs__type {
+    font: 400 18px/30px $open-sans;
+    padding: 16px 24px 13px;
+  }
+}

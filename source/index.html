@@ -95,8 +95,75 @@
           </div>
         </div>
       </section>
+      <section class="feedbacks">
+        <div class="feedbacks__wrapper">
+          <input class="visually-hidden" type="radio" id="feedbacks-btn-1" name="feedbacks-toggle" checked>
+          <input class="visually-hidden" type="radio" id="feedbacks-btn-2" name="feedbacks-toggle">
+          <input class="visually-hidden" type="radio" id="feedbacks-btn-3" name="feedbacks-toggle">
+          <div class="feedbacks__controls">
+            <label for="feedbacks-btn-1"></label>
+            <label for="feedbacks-btn-2"></label>
+            <label for="feedbacks-btn-3"></label>
+          </div>
+          <button class="feedbacks__button-left"></button>
+          <button class="feedbacks__button-right"></button>
+          <ul class="feedbacks__list">
+            <li class="feedbacks__item">
+              <blockquote class="feedbacks__text">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </blockquote>
+              <p class="feedbacks__author"><cite>Николай Петров</cite></p>
+              <p class="feedbacks__info">25 лет, водитель трамвая</p>
+            </li>
+            <li class="feedbacks__item">
+              <blockquote class="feedbacks__text">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </blockquote>
+              <p class="feedbacks__author"><cite>Николай Петров</cite></p>
+              <p class="feedbacks__info">25 лет, водитель трамвая</p>
+            </li>
+            <li class="feedbacks__item">
+              <blockquote class="feedbacks__text">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+              </blockquote>
+              <p class="feedbacks__author"><cite>Николай Петров</cite></p>
+              <p class="feedbacks__info">25 лет, водитель трамвая</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="tariffs">
+        <div class="tariffs__wrapper">
+          <table class="tariffs__list">
+            <tr>
+              <th class="tariffs__header tariffs__header--empty"></th>
+              <th class="tariffs__header tariffs__header--base"><span>База<br></span> 1,99 USD</th>
+              <th class="tariffs__header tariffs__header--standard tariffs__header--hit"><span>Стандарт<br></span> 3,99 USD</th>
+              <th class="tariffs__header tariffs__header--unlim"><span>Анлим<br></span> 9,99 USD</th>
+            </tr>
+            <tr>
+              <td class="tarrifs__type">Розовый фильтр</td>
+              <td class="tariffs__details tariffs__details--yes"></td>
+              <td class="tariffs__details tariffs__details--yes"></td>
+              <td class="tariffs__details tariffs__details--yes"></td>
+            </tr>
+            <tr>
+              <td class="tarrifs__type">Смайлики</td>
+              <td class="tariffs__details tariffs__details--no"></td>
+              <td class="tariffs__details tariffs__details--yes"></td>
+              <td class="tariffs__details tariffs__details--yes"></td>
+            </tr>
+            <tr>
+              <td class="tarrifs__type">Комментарии</td>
+              <td class="tariffs__details tariffs__details--no"></td>
+              <td class="tariffs__details tariffs__details--no"></td>
+              <td class="tariffs__details tariffs__details--yes"></td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
-    <script type="text/javascript">
+    <script type="text/javascript" defer="defer">
       var navMain = document.querySelector('.main-navigation');
       var navToggle = document.querySelector('.page-header__toggle');
 
