@@ -3,6 +3,11 @@
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat  50% 0;
   padding: 100px 0 87px;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/bg-back-mobile@2x.jpg") no-repeat  50% 0;
+    background-size: cover;
+  }
 }
 
 .banner__wrapper {
@@ -22,6 +27,13 @@
     margin-top: -110px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
     padding: 190px 0 150px;
+    background-size: 1200px auto;
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/bg-back-tablet@2x.jpg") no-repeat  50% 0;
+      background-size: 2400px auto;
+    }
   }
 
   .banner__text {
