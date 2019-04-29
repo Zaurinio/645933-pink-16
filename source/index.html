@@ -97,39 +97,38 @@
       </section>
       <section class="feedbacks">
         <div class="feedbacks__wrapper">
-          <input class="visually-hidden" type="radio" id="feedbacks-btn-1" name="feedbacks-toggle" checked>
-          <input class="visually-hidden" type="radio" id="feedbacks-btn-2" name="feedbacks-toggle">
-          <input class="visually-hidden" type="radio" id="feedbacks-btn-3" name="feedbacks-toggle">
-          <div class="feedbacks__controls">
-            <label for="feedbacks-btn-1"></label>
-            <label for="feedbacks-btn-2"></label>
-            <label for="feedbacks-btn-3"></label>
-          </div>
-          <button class="feedbacks__button-left"></button>
-          <button class="feedbacks__button-right"></button>
-          <ul class="feedbacks__list">
-            <li class="feedbacks__item">
+           <ul class="feedbacks__list">
+            <li class="feedbacks__item feedbacks__item--active">
               <blockquote class="feedbacks__text">
                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </blockquote>
-              <p class="feedbacks__author"><cite>Николай Петров</cite></p>
+              <p class="feedbacks__author"><cite>Николай Петров1</cite></p>
               <p class="feedbacks__info">25 лет, водитель трамвая</p>
             </li>
             <li class="feedbacks__item">
               <blockquote class="feedbacks__text">
                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </blockquote>
-              <p class="feedbacks__author"><cite>Николай Петров</cite></p>
+              <p class="feedbacks__author"><cite>Николай Петров2</cite></p>
               <p class="feedbacks__info">25 лет, водитель трамвая</p>
             </li>
             <li class="feedbacks__item">
               <blockquote class="feedbacks__text">
                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
               </blockquote>
-              <p class="feedbacks__author"><cite>Николай Петров</cite></p>
+              <p class="feedbacks__author"><cite>Николай Петров3</cite></p>
               <p class="feedbacks__info">25 лет, водитель трамвая</p>
             </li>
           </ul>
+          <div class="feedbacks__controls">
+            <button type="button" class="feedbacks__button feedbacks__button--active"><span class="visually-hidden">1-ый слайд</span></button>
+            <button type="button" class="feedbacks__button"><span class="visually-hidden">2-ой слайд</span></button>
+            <button type="button" class="feedbacks__button"><span class="visually-hidden">3-ий слайд</span></button>
+          </div>
+          <div class="feedbacks__arrows">
+            <button class="feedbacks__arrow feedbacks__arrow-prev"></button>
+            <button class="feedbacks__arrow feedbacks__arrow-next"></button>
+          </div>
         </div>
       </section>
       <section class="tariffs">
@@ -143,39 +142,97 @@
             </tr>
             <tr>
               <td class="tarrifs__type">Розовый фильтр</td>
-              <td class="tariffs__details tariffs__details--yes"></td>
-              <td class="tariffs__details tariffs__details--yes"></td>
-              <td class="tariffs__details tariffs__details--yes"></td>
+              <td class="tariffs__details tariffs__details--yes"><span>Розовый фильтр</span></td>
+              <td class="tariffs__details tariffs__details--yes"><span>Розовый фильтр</span></td>
+              <td class="tariffs__details tariffs__details--yes"><span>Розовый фильтр</span></td>
             </tr>
             <tr>
               <td class="tarrifs__type">Смайлики</td>
-              <td class="tariffs__details tariffs__details--no"></td>
-              <td class="tariffs__details tariffs__details--yes"></td>
-              <td class="tariffs__details tariffs__details--yes"></td>
+              <td class="tariffs__details tariffs__details--no"><span>Смайлики</span></td>
+              <td class="tariffs__details tariffs__details--yes"><span>Смайлики</span></td>
+              <td class="tariffs__details tariffs__details--yes"><span>Смайлики</span></td>
             </tr>
             <tr>
               <td class="tarrifs__type">Комментарии</td>
-              <td class="tariffs__details tariffs__details--no"></td>
-              <td class="tariffs__details tariffs__details--no"></td>
-              <td class="tariffs__details tariffs__details--yes"></td>
+              <td class="tariffs__details tariffs__details--no"><span>Комментарии</span></td>
+              <td class="tariffs__details tariffs__details--no"><span>Комментарии</span></td>
+              <td class="tariffs__details tariffs__details--yes"><span>Комментарии</span></td>
             </tr>
           </table>
+          <div class="tariffs__controls">
+            <button type="button" class="tariffs__button"><span class="visually-hidden">1-ый слайд</span></button>
+            <button type="button" class="tariffs__button tariffs__button--active"><span class="visually-hidden">2-ой слайд</span></button>
+            <button type="button" class="tariffs__button"><span class="visually-hidden">3-ий слайд</span></button>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <p class="contacts__title contacts__title--question">Остались вопросы?</p>
+          <p class="contacts__title contacts__title--response">Свяжитесь с нами!</p>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--phone">
+              <p class="contacts__type">Звоните:</p>
+              <p class="contacts__info">+7 (812) 555-66-66</p>
+            </li>
+            <li class="contacts__item contacts__item--email">
+              <p class="contacts__type">Пишите:</p>
+              <p class="contacts__info">mail@htmlacademy.ru</p>
+            </li>
+            <li class="contacts__item contacts__item--address">
+              <p class="contacts__type">Приезжайте в гости:</p>
+              <p class="contacts__info">ул. Большая Конюшенная, 19/8</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" allowfullscreen="true"></iframe>
         </div>
       </section>
     </main>
-    <script type="text/javascript" defer="defer">
-      var navMain = document.querySelector('.main-navigation');
-      var navToggle = document.querySelector('.page-header__toggle');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-navigation--closed')) {
-          navMain.classList.remove('main-navigation--closed');
-          navMain.classList.add('main-navigation--opened');
-        } else {
-          navMain.classList.add('main-navigation--closed');
-          navMain.classList.remove('main-navigation--opened');
-        }
-      });
-    </script>
+    <script src="js/external.js"></script>
   </body>
+  <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__logo">
+          <img src="img/logo-pink-blue-mobile.svg" class="main-footer__logo-image" height="42" width="149" alt="Логотип приложения Пинк">
+        </a>
+        <ul class="main-footer__list">
+          <li class="main-footer__item">
+            <a href="#" class="main-footer__link main-footer__link--twitter">
+              <span class="visually-hidden">Twitter</span>
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <g id="W6EeEF_1_">
+                <g>
+                  <path fill="#d22856" fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+                </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li class="main-footer__item">
+            <a href="#" class="main-footer__link main-footer__link--facebook">
+              <span class="visually-hidden">Facebook</span>
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+              <path fill="#d22856" d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+            </svg>
+            </a>
+          </li>
+          <li class="main-footer__item">
+            <a href="#" class="main-footer__link main-footer__link--youtube">
+              <span class="visually-hidden">Youtube</span>
+              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+              <path fill="#d22856" d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="main-footer__license">
+          <p class="main-footer__developer">Разработано</p>
+          <a class="page-footer__developer-link">
+            <img src="img/htmlacademy.svg" class="page-header__developer-logo" height="34" width="27" alt="Логотип приложения Пинк">
+          </a>
+        </div>
+      </div>
+    </footer>
 </html>

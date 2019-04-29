@@ -18,6 +18,10 @@
   display: none;
   padding-top: 45px;
   padding-bottom: 110px;
+
+  &--active {
+    display: block;
+  }
 }
 
 .feedbacks__text {
@@ -50,37 +54,26 @@
   z-index: 10;
 }
 
-.feedbacks__controls label {
+.feedbacks__button {
+  @include button-reset;
   display: inline-block;
-  border: 3px solid #ffffff;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  padding: 3px;
   background-color: rgba(40, 54, 69, 0.3);
-  margin-right: 16px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
   vertical-align: middle;
 
-  &:last-child {
-    margin-right: 0;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &--active {
+    background-color: transparent;
+    border: 3px solid #283645;
   }
 }
 
-#feedbacks-btn-1:checked ~ .feedbacks__controls label[for="feedbacks-btn-1"],
-#feedbacks-btn-2:checked ~ .feedbacks__controls label[for="feedbacks-btn-2"],
-#feedbacks-btn-3:checked ~ .feedbacks__controls label[for="feedbacks-btn-3"] {
-  border: 3px solid #283645;
-  background-color: transparent;
-}
-
-#feedbacks-btn-1:checked ~ .feedbacks__list .feedbacks__item:nth-child(1),
-#feedbacks-btn-2:checked ~ .feedbacks__list .feedbacks__item:nth-child(2),
-#feedbacks-btn-3:checked ~ .feedbacks__list .feedbacks__item:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-}
-
-.feedbacks__button-left,
-.feedbacks__button-right {
+.feedbacks__arrows {
   display: none;
 }
 
@@ -99,7 +92,7 @@
   }
 
   .feedbacks__info {
-    display: inline;
+    display: block;
   }
 
   .feedbacks__item {
@@ -151,8 +144,16 @@
     font-size: 18px;
   }
 
-  .feedbacks__button-left,
-  .feedbacks__button-right {
+  .feedbacks__button {
+    display: none;
+  }
+
+  .feedbacks__arrows {
+    display: block;
+  }
+
+  .feedbacks__arrow-prev,
+  .feedbacks__arrow-next {
     display: inline-block;
     width: 22px;
     height: 41px;
@@ -162,33 +163,31 @@
     padding: 0;
   }
 
-  .feedbacks__button-left {
+  .feedbacks__arrow-prev {
     top: 43%;
     left: 0;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 41px;
+      display: block;
+      background: url("../img/icon-review-arrow-left.svg") no-repeat;
+    }
   }
 
-  .feedbacks__button-right {
+  .feedbacks__arrow-next {
     top: 43%;
     right: 0;
-  }
+    cursor: pointer;
 
-  .feedbacks__button-left::before {
-    content: "";
-    width: 22px;
-    height: 41px;
-    display: block;
-    background: url("../img/icon-review-arrow-left.svg") no-repeat;
-  }
-
-  .feedbacks__button-right::before {
-    content: "";
-    width: 22px;
-    height: 41px;
-    display: block;
-    background: url("../img/icon-review-arrow-right.svg") no-repeat;
-  }
-
-  .feedbacks__controls {
-    display: none;
+    &::before {
+      content: "";
+      width: 22px;
+      height: 41px;
+      display: block;
+      background: url("../img/icon-review-arrow-right.svg") no-repeat;
+    }
   }
 }
