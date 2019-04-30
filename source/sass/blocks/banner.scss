@@ -27,12 +27,12 @@
     margin-top: -110px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
     padding: 190px 0 150px;
-    background-size: 1200px auto;
+    background-size: 100% auto;
 
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: url("../img/bg-back-tablet@2x.jpg") no-repeat  50% 0;
-      background-size: 2400px auto;
+      background-size: 100% auto;
     }
   }
 
