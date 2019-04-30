@@ -34,7 +34,7 @@
 
 .posts__image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -55,13 +55,9 @@
     @include wrapper-tb;
   }
 
-  .posts__picture--panorama {
-    min-height: 510px;
-  }
-
-  .posts__image--panorama {
-    min-height: 510px;
-  }
+  // .posts__image--panorama {
+  //   height: 100%;
+  // }
 
   .photos__list {
     display: flex;
@@ -75,10 +71,6 @@
 
   .posts__item:not(:first-child) {
     width: 300px;
-  }
-
-  .posts__image {
-    height: 300px;
   }
 }
 
@@ -107,9 +99,9 @@
     margin-right: 20px;
   }
 
-  .posts__image {
-    height: 400px;
-  }
+  // .posts__image {
+  //   height: 400px;
+  // }
 
   .posts__content--panorama {
     min-height: 120px;
