@@ -70,6 +70,7 @@
 
   .offer__list::after {
     display: none;
+    background-image: none;
   }
 
   .offer__slogan {
@@ -91,6 +92,7 @@
   .offer__list::before,
   .offer__list::after {
     display: none;
+    background-image: none;
   }
 
   .offer__list {

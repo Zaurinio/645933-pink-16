@@ -100,6 +100,7 @@
 
     &::before {
       display: none;
+      background-image: none;
     }
   }
 
@@ -114,6 +115,7 @@
 
   .downloading::before {
     display: none;
+    background-image: none;
   }
 
   .downloading__content {

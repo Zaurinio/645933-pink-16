@@ -34,7 +34,6 @@
 
 .posts__image {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -55,9 +54,9 @@
     @include wrapper-tb;
   }
 
-  // .posts__image--panorama {
-  //   height: 100%;
-  // }
+  .posts__picture--panorama {
+    width: calc(100vw + 40px);
+  }
 
   .photos__list {
     display: flex;
@@ -99,11 +98,8 @@
     margin-right: 20px;
   }
 
-  // .posts__image {
-  //   height: 400px;
-  // }
-
   .posts__content--panorama {
     min-height: 120px;
+    width: 100vw;
   }
 }
