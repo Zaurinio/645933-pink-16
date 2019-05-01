@@ -40,18 +40,33 @@
     &--mood {
       &::before {
         background: url("../img/iphone-screen-1-desktop@1x.png") no-repeat;
+        background-size: 292px 302px;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/iphone-screen-1-desktop@2x.png");
+        }
       }
     }
 
     &--modify {
       &::before {
         background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat;
+        background-size: 292px 302px;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/iphone-screen-2-desktop@2x.png");
+        }
       }
     }
 
     &--friendship {
       &::before {
         background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
+        background-size: 292px 302px;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/iphone-screen-3-desktop@2x.png");
+        }
       }
     }
   }

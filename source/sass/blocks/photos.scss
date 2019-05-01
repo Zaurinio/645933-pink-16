@@ -34,7 +34,6 @@
 
 .posts__image {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -56,11 +55,7 @@
   }
 
   .posts__picture--panorama {
-    min-height: 510px;
-  }
-
-  .posts__image--panorama {
-    min-height: 510px;
+    width: calc(100vw + 40px);
   }
 
   .photos__list {
@@ -75,10 +70,6 @@
 
   .posts__item:not(:first-child) {
     width: 300px;
-  }
-
-  .posts__image {
-    height: 300px;
   }
 }
 
@@ -107,11 +98,8 @@
     margin-right: 20px;
   }
 
-  .posts__image {
-    height: 400px;
-  }
-
   .posts__content--panorama {
     min-height: 120px;
+    width: 100vw;
   }
 }

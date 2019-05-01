@@ -26,8 +26,13 @@
   width: 157px;
   height: 320px;
   background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  background-size: 157px 320px;
   display: block;
   margin: 0 auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -53,13 +58,19 @@
     width: 268px;
     height: 481px;
     background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat;
+    background-size: 268px 481px;
     position: absolute;
     left: 0;
     top: 54px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+    }
   }
 
   .offer__list::after {
     display: none;
+    background-image: none;
   }
 
   .offer__slogan {
@@ -81,6 +92,7 @@
   .offer__list::before,
   .offer__list::after {
     display: none;
+    background-image: none;
   }
 
   .offer__list {

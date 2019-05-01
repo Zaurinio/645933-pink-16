@@ -15,19 +15,23 @@
               <a class="site-list__link">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#" class="site-list__link">Фотографии</a>
+              <a href="photo.html" class="site-list__link">Фотографии</a>
             </li>
             <li class="site-list__item">
               <a href="#" class="site-list__link">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#" class="site-list__link">HTML Academy</a>
+              <a href="https://htmlacademy.ru/" class="site-list__link">HTML Academy</a>
             </li>
           </ul>
         </nav>
         <div class="page-header__top">
           <a class="page-header__logo">
-            <img src="img/logo-pink-white-mobile.svg" class="page-header__logo-image" height="22" width="75" alt="Мобильное приложение Пинк">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" class="page-header__logo-image" height="22" width="75" alt="Мобильное приложение Пинк">
+            </picture>
           </a>
           <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
         </div>
