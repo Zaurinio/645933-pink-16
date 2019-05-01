@@ -47,6 +47,11 @@
   }
 }
 
+.page-header__logo-image--tablet,
+.page-header__logo-image--desktop {
+  display: none;
+}
+
 .page-header__toggle {
   display: block;
   position: relative;
@@ -158,6 +163,11 @@
     width: 150px;
   }
 
+  .page-header__logo-image--mobile,
+  .page-header__logo-image--desktop {
+    display: none;
+  }
+
   .page-header__toggle {
     margin-top: 44px;
   }
@@ -185,6 +195,11 @@
     display: block;
     height: auto;
     width: 150px;
+  }
+
+  .page-header__logo-image--mobile,
+  .page-header__logo-image--tablet {
+    display: none;
   }
 
   .page-header__top {
