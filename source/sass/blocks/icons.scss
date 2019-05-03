@@ -1,0 +1,111 @@
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icons__item div {
+  display: flex;
+}
+
+.icons__item svg {
+  vertical-align: middle;
+  max-width: 100%;
+  display: block;
+}
+
+.icons__image {
+  fill: rgba(40, 54, 69, 0.3);
+
+  &--active {
+    fill: #d22856;
+  }
+}
+
+.icons__item {
+  &:hover .icons__image {
+    fill: rgba(40, 54, 69, 0.5);
+  }
+}
+
+.icons__image--crop {
+  width: 44px;
+  height: 44px;
+}
+
+.icons__image--fill {
+  width: 48px;
+  height: 43px;
+}
+
+.icons__image--contrast {
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .icons {
+    display: block;
+  }
+
+  .icons__item {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3px;
+    padding-right: 18px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+  }
+
+  .icons__item div {
+    min-width: 24px;
+    min-height: 22px;
+  }
+
+  .icons__image {
+    margin: auto;
+  }
+
+  .icons__image--crop {
+    width: 22px;
+    height: 22px;
+  }
+
+  .icons__image--fill {
+    width: 24px;
+    height: 22px;
+  }
+
+  .icons__image--contrast {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .icons__item {
+    padding: 14px 30px 14px 0;
+    align-items: center;
+  }
+
+  .icons__item div {
+    min-width: 48px;
+    min-height: 44px;
+  }
+
+  .icons__image--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .icons__image--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .icons__image--contrast {
+    width: 32px;
+    height: 32px;
+  }
+}

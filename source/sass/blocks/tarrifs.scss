@@ -34,6 +34,10 @@
 .tariffs__details {
   border: 2px solid #e7e7e7;
   background-color: #ffffff;
+  padding: 14px 24px 16px;
+  font: 400 14px/30px $open-sans;
+  color: #283645;
+  text-transform: uppercase;
 }
 
 .tariffs__header {
@@ -50,14 +54,6 @@
 
 .tariffs__header span {
   font: 700 18px/30px $open-sans;
-}
-
-.tarrifs__type,
-.tariffs__details {
-  padding: 14px 24px 16px;
-  font: 400 14px/30px $open-sans;
-  color: #283645;
-  text-transform: uppercase;
 }
 
 .tariffs__header:nth-child(3) {
@@ -98,7 +94,7 @@
   }
 }
 
-  .tariffs__details--yes {
+.tariffs__details--yes {
   &::before {
     content: "";
     width: 31px;
@@ -114,18 +110,18 @@
 }
 
 .tariffs__details--no {
-    &::before {
-      content: "";
-      width: 27px;
-      height: 26px;
-      background: url("../img/icon-no.svg") no-repeat;
-      position: absolute;
-      display: block;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 17px;
-    }
+  &::before {
+    content: "";
+    width: 27px;
+    height: 26px;
+    background: url("../img/icon-no.svg") no-repeat;
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 17px;
   }
+}
 
 @media (min-width: $tablet-width) {
   .tariffs__wrapper {

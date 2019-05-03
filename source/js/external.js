@@ -1,4 +1,4 @@
-var navMain = document.querySelector('.main-navigation');
+      var navMain = document.querySelector('.main-navigation');
       var navToggle = document.querySelector('.page-header__toggle');
 
       navToggle.addEventListener('click', function() {
@@ -51,8 +51,6 @@ var navMain = document.querySelector('.main-navigation');
         clickFunctionArrow(i);
       }
 
-
-
         var tariffsSlider = document.querySelector('.tariffs__wrapper');
         var tariffsSliderList = tariffsSlider.querySelector('.tariffs__list');
         var tariffsDotList = tariffsSlider.querySelectorAll('.tariffs__button');
@@ -69,3 +67,17 @@ var navMain = document.querySelector('.main-navigation');
           clickTariffsFunctionButton(i);
         }
 
+
+
+      var filterIcons = document.querySelector('.filter__wrapper');
+      var filterItems = filterIcons.querySelectorAll('.icons__item');
+      var filterIcon = filterIcons.querySelectorAll('.icons__image');
+      var clickFilterIconFunction = function (currentItem) {
+        filterItems[currentItem].addEventListener('click', function () {
+          filterIcons.querySelector('.icons__image--active').classList.remove('icons__image--active');
+          filterIcon[currentItem].classList.add('icons__image--active');
+        });
+      }
+      for (var i = 0; i < filterIcon.length; i++ ) {
+        clickFilterIconFunction(i);
+      }

@@ -15,7 +15,7 @@
               <a class="site-list__link">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="#" class="site-list__link">Фотографии</a>
+              <a href="photo.html" class="site-list__link">Фотографии</a>
             </li>
             <li class="site-list__item">
               <a href="#" class="site-list__link">Конкурс</a>
@@ -97,7 +97,7 @@
       </section>
       <section class="feedbacks">
         <div class="feedbacks__wrapper">
-           <ul class="feedbacks__list">
+          <ul class="feedbacks__list">
             <li class="feedbacks__item feedbacks__item--active">
               <blockquote class="feedbacks__text">
                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
@@ -190,7 +190,6 @@
         </div>
       </section>
     </main>
-    <script src="js/external.js"></script>
   </body>
   <footer class="main-footer">
       <div class="main-footer__wrapper">
@@ -235,4 +234,74 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-navigation');
+      var navToggle = document.querySelector('.page-header__toggle');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-navigation--closed')) {
+          navMain.classList.remove('main-navigation--closed');
+          navMain.classList.add('main-navigation--opened');
+        } else {
+          navMain.classList.add('main-navigation--closed');
+          navMain.classList.remove('main-navigation--opened');
+        }
+      });
+
+      var feedbacksSlider = document.querySelector('.feedbacks__wrapper');
+      var feedbacksSliderList = feedbacksSlider.querySelectorAll('.feedbacks__item');
+      var feedbacksDotList = feedbacksSlider.querySelectorAll('.feedbacks__button');
+      var feedbacksArrowList = feedbacksSlider.querySelectorAll('.feedbacks__arrow');
+      var feedbacksCurrentSlide = 0;
+      var clickFeedbacksFunctionButton = function (currentButton) {
+        feedbacksDotList[currentButton].addEventListener('click', function () {
+          feedbacksSlider.querySelector('.feedbacks__item--active').classList.remove('feedbacks__item--active');
+          feedbacksSliderList[currentButton].classList.add('feedbacks__item--active');
+          feedbacksSlider.querySelector('.feedbacks__button--active').classList.remove('feedbacks__button--active');
+          feedbacksDotList[currentButton].classList.add('feedbacks__button--active');
+        })
+      }
+      for (var i = 0; i < feedbacksDotList.length; i++ ) {
+        clickFeedbacksFunctionButton(i);
+      }
+
+      var clickFunctionArrow = function (currentArrow) {
+        feedbacksArrowList[currentArrow].addEventListener('click', function () {
+          feedbacksSlider.querySelector('.feedbacks__item--active').classList.remove('feedbacks__item--active');
+          if (currentArrow == 1) {
+            if (feedbacksCurrentSlide == feedbacksSliderList.length - 1) {
+                feedbacksCurrentSlide = 0;
+              } else {
+                feedbacksCurrentSlide++;
+              }
+          } else if (currentArrow == 0) {
+              if (feedbacksCurrentSlide == 0) {
+                feedbacksCurrentSlide = 2;
+              } else {
+                feedbacksCurrentSlide--;
+              }
+          }
+          feedbacksSliderList[feedbacksCurrentSlide].classList.add('feedbacks__item--active');
+        });
+      }
+      for (var i = 0; i < feedbacksArrowList.length; i++ ) {
+        clickFunctionArrow(i);
+      }
+
+        var tariffsSlider = document.querySelector('.tariffs__wrapper');
+        var tariffsSliderList = tariffsSlider.querySelector('.tariffs__list');
+        var tariffsDotList = tariffsSlider.querySelectorAll('.tariffs__button');
+        var clickTariffsFunctionButton = function (currentButton) {
+          tariffsDotList[currentButton].addEventListener('click', function () {
+            var tariffsCurrentSlide = currentButton;
+            var offset = (tariffsCurrentSlide * -33.333333) + "%";
+            tariffsSliderList.style.transform = "translateX("+ offset +")";
+            tariffsSlider.querySelector('.tariffs__button--active').classList.remove('tariffs__button--active');
+            tariffsDotList[currentButton].classList.add('tariffs__button--active');
+          });
+        }
+        for (var i = 0; i < 3; i++ ) {
+          clickTariffsFunctionButton(i);
+        }
+    </script>
 </html>
