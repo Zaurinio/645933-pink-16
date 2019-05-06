@@ -1,16 +1,16 @@
-.banner {
+.form-banner {
   margin-top: -66px;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat  50% 0;
-  padding: 100px 0 87px;
+  padding: 102px 0 59px;
   background-size: cover;
 }
 
-.banner__wrapper {
+.form-banner__wrapper {
   @include wrapper-mb;
   margin: 0 auto;
 }
 
-.banner__text {
+.form-banner__text {
   font: 300 24px/24px $open-sans;
   color: #ffffff;
   text-align: center;
@@ -18,28 +18,28 @@
 }
 
 @media (min-width: $tablet-width) {
-  .banner {
+  .form-banner {
     margin-top: -110px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
     padding: 190px 0 150px;
   }
 
-  .banner__text {
+  .form-banner__text {
     font: 300 50px/50px $open-sans;
     margin: 0;
   }
 
-  .banner__wrapper {
+  .form-banner__wrapper {
     @include wrapper-tb;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .banner {
+  .form-banner {
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
   }
 
-  .banner__wrapper {
+  .form-banner__wrapper {
     @include wrapper-dt;
   }
 }

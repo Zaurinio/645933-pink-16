@@ -1,0 +1,58 @@
+.error {
+  padding-top: 43px;
+  padding-bottom: 50px;
+}
+
+.error__title {
+  margin-bottom: 30px;
+}
+
+.error__text {
+  margin-bottom: 38px;
+}
+
+.error__button {
+  min-width: 280px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .error {
+    padding: 40px 80px 50px;
+  }
+
+  .error__text {
+    margin-bottom: 42px;
+  }
+
+  .error__title {
+    margin-bottom: 32px;
+  }
+
+  .error__button {
+    min-width: 299px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .error {
+    padding: 0;
+  }
+
+  .error__content {
+    padding: 45px 190px 47px;
+  }
+
+  .error__text {
+    margin-bottom: 0
+  }
+
+  .error__controls {
+    padding: 48px 160px 52px;
+    background-color: #f2f2f2;
+  }
+
+  .error__button {
+    min-width: 460px;
+  }
+}

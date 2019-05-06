@@ -34,9 +34,101 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="banner">
-        <div class="banner__wrapper">
-          <p class="banner__text">Фотографии пользователей</p>
+      <section class="form-banner">
+        <div class="form-banner__wrapper">
+          <p class="form-banner__text">Конкурс на самое безбашенное путешествие с Пинк</p>
+        </div>
+      </section>
+      <section class="questionnaire">
+        <div class="questionnaire__wrapper">
+          <p class="questionnaire__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="questionnaire__text--expand">Пожалуйста, заполните форму ниже:</span></p>
+          <form class="questionnaire__form" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="questionnaire__group questionnaire__group--fullname">
+              <ul class="questionnaire__list fullname">
+                <li class="questionnaire__item fullname__item">
+                  <label for="surname" class="fullname__label">Фамилия:</label>
+                  <input type="text" class="fullname__text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+                </li>
+                <li class="questionnaire__item fullname__item">
+                  <label for="surname" class="fullname__label">Имя:</label>
+                  <input type="text" class="fullname__text" name="surname" id="surname" placeholder="Введите ваше имя *" required>
+                </li>
+                <li class="questionnaire__item fullname__item">
+                  <label for="surname" class="fullname__label">Отчество:</label>
+                  <input type="text" class="fullname__text" name="surname" id="surname" placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__group questionnaire__group--achievements">
+              <legend class="questionnaire__title questionnaire__title--achievements">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="questionnaire__list achievements">
+                <li class="questionnaire__item achievements__item">
+                  <input class="achievement__checkbox visually-hidden" type="checkbox" name="achievement" id="selfie-achievement" checked>
+                  <label for="selfie-achievement" class="achievement__label">Сделал селфи с акулой</label>
+                </li>
+                <li class="questionnaire__item achievements__item">
+                  <input class="achievement__checkbox visually-hidden" type="checkbox" name="achievement" id="sunburn-achievement" checked>
+                  <label for="sunburn-achievement" class="achievement__label">Обгорел на пляже</label>
+                </li>
+                <li class="questionnaire__item achievements__item">
+                  <input class="achievement__checkbox visually-hidden" type="checkbox" name="achievement" id="chuck-achievement">
+                  <label for="chuck-achievement" class="achievement__label">Видел Чака Норриса</label>
+                </li>
+                <li class="questionnaire__item achievements__item">
+                  <input class="achievement__checkbox visually-hidden" type="checkbox" name="achievement" id="tokens-achievement">
+                  <label for="tokens-achievement" class="achievement__label">Накупил сувениров</label>
+                </li>
+                <li class="questionnaire__item achievements__item">
+                  <input class="achievement__checkbox visually-hidden" type="checkbox" name="achievement" id="castle-achievement" checked>
+                  <label for="castle-achievement" class="achievement__label">Удержал башню</label>
+                </li>
+                <li class="questionnaire__item achievements__item">
+                  <input class="achievement__checkbox visually-hidden" type="checkbox" name="achievement" id="debauch-achievement">
+                  <label for="debauch-achievement" class="achievement__label">Разгромил отель</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__group questionnaire__group--enquiry">
+              <legend class="questionnaire__title questionnaire__title--enquiry">Контактная информация</legend>
+              <ul class="questionnaire__list enquiry">
+                <li class="questionnaire__item enquiry__item">
+                  <label for="surname" class="enquiry__label">Номер телефона</label>
+                  <span class="enquiry__container enquiry__container--phone">
+                    <input type="text" class="enquiry__text" name="surname" id="surname" placeholder="Номер, пожалуйста">
+                  </span>
+                </li>
+                <li class="questionnaire__item enquiry__item">
+                  <label for="surname" class="enquiry__label">Адрес почты</label>
+                  <span class="enquiry__container enquiry__container--mail">
+                    <input type="text" class="enquiry__text" name="surname" id="surname" placeholder="Введите почту *" required>
+                  </span>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__group questionnaire__group--platform">
+              <legend class="questionnaire__title questionnaire__title--platform">С каким приложением путешествовали?</legend>
+              <ul class="questionnaire__list platform">
+                <li class="questionnaire__item platform__item">
+                  <input class="platform__radiobutton visually-hidden" type="radio" name="platform" id="ios-platform" checked>
+                  <label for="ios-platform" class="platform__label">Pink для iOS</label>
+                </li>
+                <li class="questionnaire__item platform__item">
+                  <input class="platform__radiobutton visually-hidden" type="radio" name="platform" id="android-platform">
+                  <label for="android-platform" class="platform__label">Pink на Android</label>
+                </li>
+                <li class="questionnaire__item platform__item">
+                  <input class="platform__radiobutton visually-hidden" type="radio" name="platform" id="wp-platform">
+                  <label for="wp-platform" class="platform__label">Windows Phone</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__group questionnaire__group--emotions">
+              <legend class="questionnaire__title questionnaire__title--emotions">Опишите свои эмоции</legend>
+              <textarea class="questionnaire__text-field" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="5"></textarea>
+            </fieldset>
+              <input type="submit" class="questionnaire__button" value="Отправить форму">
+              <p class="questionnaire__footnote"><span>*</span> — обязательные поля</p>
+          </form>
         </div>
       </section>
     </main>
@@ -83,6 +175,31 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup acknowledgement">
+      <div class="popup__wrapper">
+        <div class="popup__content acknowledgement__content">
+          <p class="popup__title acknowledgement__title">Ваша заявка отправлена</p>
+          <p class="popup__text acknowledgement__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и<br class="popup__linebreak"> оповестим вас.</p>
+        </div>
+        <div class="popup__controls acknowledgement__controls">
+          <input type="button" name="popup__button" class="popup__button acknowledgement__button" value="Закрыть окно">
+        </div>
+      </div>
+    </div>
+
+    <div class="popup error">
+      <div class="popup__wrapper error__wrapper">
+        <div class="popup__content error__content">
+          <p class="popup__title error__title">Что-то пошло не так!</p>
+          <p class="popup__text error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <div class="popup__controls error__controls">
+          <input type="button" name="popup__button" class="popup__button error__button" value="Закрыть окно">
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript">
       var navMain = document.querySelector('.main-navigation');
       var navToggle = document.querySelector('.page-header__toggle');

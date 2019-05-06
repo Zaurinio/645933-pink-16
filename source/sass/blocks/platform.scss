@@ -1,0 +1,27 @@
+.platform__item:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.platform__label  {
+  font: 400 18px/30px $open-sans;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 35px;
+    height: 35px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 31px;
+    background-color: #ffffff;
+  }
+}
+
+.platform__radiobutton:checked ~ .platform__label {
+  &::before {
+    background: url("../img/icon-map-marker.svg") no-repeat;
+    background-position: center;
+  }
+}
