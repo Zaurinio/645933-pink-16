@@ -10,6 +10,7 @@
 .filter__list {
   list-style: none;
   margin-bottom: 33px;
+  position: relative;
 
   @include space-reset;
 }
@@ -107,9 +108,15 @@
 }
 
 .filter__slider-box--crop,
-.filter__slider-box--fill,
-.filter__slider-box--contrast {
+.filter__slider-box--fill {
   display: none;
+}
+
+.filter__slider-box--contrast {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .filter__buttons {
@@ -168,11 +175,17 @@
     width: 202px;
 
     &--crop,
-    &--fill,
-    &--contrast {
+    &--fill {
       display: block;
     }
   }
+
+  .filter__slider-box--contrast {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      transform: none;
+    }
 
   .filter__picture {
     flex-shrink: 0;
@@ -187,6 +200,7 @@
 
   .filter__buttons {
     padding-top: 0;
+    border-top: none;
   }
 
   .filter__button--post {

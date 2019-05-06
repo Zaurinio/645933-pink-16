@@ -303,5 +303,11 @@
         for (var i = 0; i < 3; i++ ) {
           clickTariffsFunctionButton(i);
         }
+        if (document.documentElement.clientWidth >= 660) {
+          function resize() {
+            tariffsSliderList.style.transform = "none";
+          }
+          window.onresize = resize;
+        }
     </script>
 </html>
