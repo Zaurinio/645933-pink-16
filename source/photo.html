@@ -153,14 +153,14 @@
           </picture>
           <div class="filter__settings">
             <ul class="filter__list icons">
-              <li class="filter__item icons__item icons__item--crop" data-active>
+              <li class="filter__item icons__item icons__item--crop">
                 <div class="icons__container">
-                  <svg viewBox="0 0 48 48" class="icons__image icons__image--crop icons__image--active">
+                  <svg viewBox="0 0 48 48" class="icons__image icons__image--crop icons__image--active" data-active>
                     <path fill="none" d="M0,0h48v48H0V0z"/>
                     <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                   </svg>
                 </div>
-                <input class="filter__slider-box filter__slider-box--crop" type="range" name="filter-range">
+                <input class="filter__slider-box filter__slider-box--crop" type="range" name="filter-range" data-active>
               </li>
               <li class="filter__item icons__item icons__item--fill">
                 <div class="icons__container">
@@ -253,10 +253,13 @@
       var filterIcons = document.querySelector('.filter__wrapper');
       var filterItems = filterIcons.querySelectorAll('.icons__item');
       var filterIcon = filterIcons.querySelectorAll('.icons__image');
+      var filterSliderBbox = filterIcons.querySelectorAll('.filter__slider-box');
       var clickFilterIconFunction = function (currentItem) {
         filterItems[currentItem].addEventListener('click', function () {
           filterIcons.querySelector('[data-active]').removeAttribute('data-active');
+          filterIcons.querySelector('[data-active]').removeAttribute('data-active');
           filterIcon[currentItem].setAttribute('data-active', true);
+          filterSliderBbox[currentItem].setAttribute('data-active', true);
         });
       }
       for (var i = 0; i < filterIcon.length; i++ ) {

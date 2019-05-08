@@ -52,29 +52,29 @@
 
     &--phone {
       &::after {
-      content: "";
-      width: 64px;
-      height: 64px;
-      display: inline-block;
-      background: url("../img/icon-phone.svg") no-repeat;
-      background-size: 20px 19px;
-      background-color: #e5e5e5;
-      background-position: 18px 22px;
-      position: relative;
+        content: "";
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        background: url("../img/icon-phone.svg") no-repeat;
+        background-size: 20px 19px;
+        background-color: #e5e5e5;
+        background-position: 18px 22px;
+        position: relative;
       }
     }
 
     &--mail {
       &::after {
-      content: "";
-      width: 64px;
-      height: 64px;
-      display: inline-block;
-      background: url("../img/icon-mail.svg") no-repeat;
-      background-size: 18px 13px;
-      background-color: #e5e5e5;
-      background-position: 19px 25px;
-      position: relative;
+        content: "";
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        background: url("../img/icon-mail.svg") no-repeat;
+        background-size: 18px 13px;
+        background-color: #e5e5e5;
+        background-position: 19px 25px;
+        position: relative;
       }
     }
   }
