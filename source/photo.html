@@ -18,10 +18,10 @@
               <a class="site-list__link">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a href="#" class="site-list__link">Конкурс</a>
+              <a href="form.html" class="site-list__link">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#" class="site-list__link">HTML Academy</a>
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="site-list__link">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -153,7 +153,7 @@
           </picture>
           <div class="filter__settings">
             <ul class="filter__list icons">
-              <li class="filter__item icons__item icons__item--crop">
+              <li class="filter__item icons__item icons__item--crop" data-active>
                 <div class="icons__container">
                   <svg viewBox="0 0 48 48" class="icons__image icons__image--crop icons__image--active">
                     <path fill="none" d="M0,0h48v48H0V0z"/>
@@ -255,8 +255,8 @@
       var filterIcon = filterIcons.querySelectorAll('.icons__image');
       var clickFilterIconFunction = function (currentItem) {
         filterItems[currentItem].addEventListener('click', function () {
-          filterIcons.querySelector('.icons__image--active').classList.remove('icons__image--active');
-          filterIcon[currentItem].classList.add('icons__image--active');
+          filterIcons.querySelector('[data-active]').removeAttribute('data-active');
+          filterIcon[currentItem].setAttribute('data-active', true);
         });
       }
       for (var i = 0; i < filterIcon.length; i++ ) {

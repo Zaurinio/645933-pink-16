@@ -13,10 +13,10 @@
   border: 2px solid #e5e5e5;
   padding: 17px 20px 13px;
   width: 100%;
-}
 
-.fullname__text::placeholder {
-  color: #283645;
+  &::placeholder {
+    color: #283645;
+  }
 }
 
 .fullname__item:not(:last-child) {

@@ -73,6 +73,10 @@
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
     background-position: center;
     margin-top: -110px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .downloading__wrapper {
@@ -94,10 +98,6 @@
     max-width: 220px;
     margin: 0;
     margin-bottom: 40px;
-  }
-
-  .downloading::before {
-    display: none;
   }
 
   .downloading__content {

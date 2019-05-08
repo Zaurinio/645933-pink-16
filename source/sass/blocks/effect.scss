@@ -42,42 +42,42 @@
     @include wrapper-tb;
     display: flex;
     justify-content: space-between;
+
+    &::after {
+      content: "24";
+      display: block;
+      position: absolute;
+      text-align: center;
+      font: 700 96px/149.47px $open-sans;
+      color: #d22856;
+      border: 14px solid #d22856;
+      border-radius: 50%;
+      height: 202px;
+      width: 202px;
+      flex-shrink: 0;
+      left: 39px;
+      top: 111px;
+      z-index: 5;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: relative;
+      width: 240px;
+      height: 275px;
+      background: url("../img/icon-timer.svg") no-repeat;
+      background-size: contain;
+      flex-shrink: 0;
+      top: 0;
+      left: 0;
+    }
   }
 
   .effect__slogan {
     font: 700 30px/36px $open-sans;
     color: #000000;
   }
-
-  .effect__wrapper::after {
-    content: "24";
-    display: block;
-    position: absolute;
-    text-align: center;
-    font: 700 96px/149.47px $open-sans;
-    color: #d22856;
-    border: 14px solid #d22856;
-    border-radius: 50%;
-    height: 202px;
-    width: 202px;
-    flex-shrink: 0;
-    left: 39px;
-    top: 111px;
-    z-index: 5;
-  }
-}
-
-.effect__wrapper::before {
-  content: "";
-  display: block;
-  position: relative;
-  width: 240px;
-  height: 275px;
-  background: url("../img/icon-timer.svg") no-repeat;
-  background-size: contain;
-  flex-shrink: 0;
-  top: 0;
-  left: 0;
 }
 
 @media (min-width: $desktop-width) {
@@ -89,6 +89,19 @@
     @include wrapper-dt;
     display: flex;
     padding-top: 68px;
+
+    &::before {
+      height: 345px;
+      width: 300px;
+    }
+
+    &::after {
+      height: 253px;
+      width: 253px;
+      left: 32px;
+      top: 137.5px;
+      font: 700 120px/186.9px $open-sans;
+    }
   }
 
   .effect__slogan {
@@ -100,23 +113,10 @@
     padding-top: 97px;
     width: 532px;
     font: 400 18px/30px $open-sans;
-  }
 
-  .effect__content::before {
-    width: 298px;
-    height: 345px;
-  }
-
-  .effect__wrapper::before {
-    height: 345px;
-    width: 300px;
-  }
-
-  .effect__wrapper::after {
-    height: 253px;
-    width: 253px;
-    left: 32px;
-    top: 137.5px;
-    font: 700 120px/186.9px $open-sans;
+    &::before {
+      width: 298px;
+      height: 345px;
+    }
   }
 }

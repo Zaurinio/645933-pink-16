@@ -5,6 +5,7 @@
 .platform__label  {
   font: 400 18px/30px $open-sans;
   position: relative;
+  display: block;
 
   &::before {
     content: "";

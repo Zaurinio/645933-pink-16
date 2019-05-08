@@ -9,17 +9,26 @@
   display: flex;
 }
 
-.icons__item svg {
-  vertical-align: middle;
-  max-width: 100%;
-  display: block;
-}
-
 .icons__image {
   fill: rgba(40, 54, 69, 0.3);
 
-  &--active {
+  &[data-active]  {
     fill: #d22856;
+  }
+
+  &--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  &--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -27,21 +36,12 @@
   &:hover .icons__image {
     fill: rgba(40, 54, 69, 0.5);
   }
-}
 
-.icons__image--crop {
-  width: 44px;
-  height: 44px;
-}
-
-.icons__image--fill {
-  width: 48px;
-  height: 43px;
-}
-
-.icons__image--contrast {
-  width: 32px;
-  height: 32px;
+  svg {
+    vertical-align: middle;
+    max-width: 100%;
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -23,13 +23,13 @@
 
 .posts__picture {
   display: block;
-}
 
-.posts__picture--panorama {
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
-  position: relative;
+  &--panorama {
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
 }
 
 .posts__image {
@@ -59,10 +59,6 @@
     min-height: 510px;
   }
 
-  .posts__image--panorama {
-    min-height: 510px;
-  }
-
   .photos__list {
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +75,10 @@
 
   .posts__image {
     height: 300px;
+
+    &--panorama {
+      min-height: 510px;
+    }
   }
 }
 

@@ -2,9 +2,10 @@
   margin-bottom: 43px;
 }
 
-.achievement__label  {
+.achievements__label {
   font: 400 18px/30px $open-sans;
   position: relative;
+  display: block;
 
   &::before {
     content: "";
@@ -17,7 +18,7 @@
   }
 }
 
-.achievement__checkbox:checked ~ .achievement__label {
+.achievements__checkbox:checked ~ .achievements__label {
   &::before {
     background: url("../img/icon-yes-red.svg") no-repeat;
     background-position: center;
@@ -38,7 +39,7 @@
     margin-bottom: 0;
   }
 
-  .achievement__label {
+  .achievements__label {
     &::before {
       margin-right: 21px;
     }

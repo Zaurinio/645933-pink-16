@@ -30,18 +30,18 @@
   border: 3px solid #e9ebec;
   display: flex;
   margin-bottom: 37px;
-}
 
-.main-footer__link--twitter {
-  padding: 16px 13px 15px 14px;
-}
+  &--twitter {
+    padding: 16px 13px 15px 14px;
+  }
 
-.main-footer__link--facebook {
-  padding: 12px 18px 15px 18px;
-}
+  &--facebook {
+    padding: 12px 18px 15px 18px;
+  }
 
-.main-footer__link--youtube {
-  padding: 15px 13px 17px 17px;
+  &--youtube {
+    padding: 15px 13px 17px 17px;
+  }
 }
 
 .main-footer__license {

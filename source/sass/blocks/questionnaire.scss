@@ -1,3 +1,7 @@
+.questionnaire {
+  overflow: hidden;
+}
+
 .questionnaire__wrapper {
   @include wrapper-mb;
   padding-top: 47px;
@@ -25,9 +29,56 @@
     margin-bottom: 42px;
   }
 
-  &--achievements,
+  &--achievements {
+    margin-bottom: 34px;
+    padding: 0 0 42px;
+    background-color: #f2f2f2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+    }
+  }
+
   &--platform {
     margin-bottom: 34px;
+    padding: 40px 0 42px;
+    background-color: #f2f2f2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+    }
   }
 
   &--emotions {
@@ -35,35 +86,9 @@
   }
 }
 
-.questionnaire__group--achievements,
-.questionnaire__group--platform {
-  padding: 40px 0 42px;
-  background-color: #f2f2f2;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #f2f2f2;
-  }
-}
-
 .questionnaire__title {
-  float:left;
-  padding: 0 30px;
+  // float:left;
+  padding: 40px 30px 0;
   margin-bottom: 40px;
   background-color: inherit;
   font: 400 14px/18px $open-sans;
@@ -105,11 +130,11 @@
   border: 2px solid #e5e5e5;
   padding: 17px 19px;
   display: block;
-}
 
-.questionnaire__text-field::placeholder {
-  font: 400 18px/30px $open-sans;
-  color: #283645;
+  &::placeholder {
+    font: 400 18px/30px $open-sans;
+    color: #283645;
+  }
 }
 
 .questionnaire__button {
@@ -129,12 +154,11 @@
   text-align: center;
   text-transform: uppercase;
   font: 400 14px/30px $open-sans;
-}
 
-.questionnaire__footnote span {
-  color: #d22856;
+  span {
+    color: #d22856;
+  }
 }
-
 
 @media (min-width: $tablet-width) {
   .questionnaire__wrapper {
@@ -166,36 +190,36 @@
       padding: 43px 58px 51px;
       border: 2px solid #e5e5e5;
     }
-  }
 
-  .questionnaire__group--achievements {
-    background-color: inherit;
-    border: 2px solid #e5e5e5;
-    padding: 50px 58px 48px;
-    margin-bottom: 52px;
+    &--achievements {
+      background-color: inherit;
+      border: 2px solid #e5e5e5;
+      padding: 50px 58px 48px;
+      margin-bottom: 52px;
 
-    &::before {
-      display: none;
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
     }
 
-    &::after {
-      display: none;
-    }
-  }
+    &--platform {
+      background-color: inherit;
+      border: 2px solid #e5e5e5;
+      padding: 50px 58px 54px;
+      margin-bottom: 52px;
+      order: -2;
 
-  .questionnaire__group--platform {
-    background-color: inherit;
-    border: 2px solid #e5e5e5;
-    padding: 50px 58px 54px;
-    margin-bottom: 52px;
-    order: -2;
+      &::before {
+        display: none;
+      }
 
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      display: none;
+      &::after {
+        display: none;
+      }
     }
   }
 
