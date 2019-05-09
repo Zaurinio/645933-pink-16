@@ -19,7 +19,6 @@
   list-style: none;
   text-align: center;
   padding-top: 76px;
-}
 
 .offer__list::after {
   content: "";
@@ -51,9 +50,8 @@
     padding-top: 125px;
     text-align: left;
     position: relative;
-  }
 
-  .offer__list::before {
+  &::before {
     content: "";
     width: 268px;
     height: 481px;
@@ -68,7 +66,7 @@
     }
   }
 
-  .offer__list::after {
+  &::after {
     display: none;
     background-image: none;
   }
@@ -89,16 +87,15 @@
     margin-bottom: 75px;
   }
 
-  .offer__list::before,
-  .offer__list::after {
-    display: none;
-    background-image: none;
-  }
-
   .offer__list {
     display: flex;
     justify-content: space-between;
     padding: 0;
     text-align: center;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }

@@ -86,12 +86,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-  }
 
-  .posts__content--panorama {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    &--panorama {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
   }
 
   .posts__content-wrapper {
@@ -100,10 +100,10 @@
 
   .posts__text {
     margin-bottom: 0;
-  }
 
-  .posts__text--panorama {
-    order: 4;
+    &--panorama {
+      order: 4;
+    }
   }
 
   .posts__item:first-child {

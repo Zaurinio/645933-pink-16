@@ -1,0 +1,51 @@
+.acknowledgement__content {
+  padding: 39px 7px 33px;
+}
+
+.acknowledgement__title {
+  margin-bottom: 30px;
+}
+
+.acknowledgement__controls {
+  background-color: #f2f2f2;
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+
+.acknowledgement__button {
+  min-width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .acknowledgement__content {
+    padding: 40px 70px 36px;
+  }
+
+  .popup__linebreak {
+    display: none;
+  }
+
+  .acknowledgement__controls {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .acknowledgement__button {
+    min-width: 299px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .acknowledgement__content {
+    padding: 45px 180px 37px;
+  }
+
+  .acknowledgement__controls {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .acknowledgement__button {
+    min-width: 460px;
+  }
+}
