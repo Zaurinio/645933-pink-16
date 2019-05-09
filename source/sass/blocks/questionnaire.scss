@@ -272,9 +272,21 @@
       width: 100%;
     }
 
-    &--fullname,
+    &--fullname {
+      width: 435px;
+    }
+
     &--platform {
       width: 435px;
+      padding: 50px 31px 54px;
+    }
+  }
+
+  .questionnaire__title {
+    font: 400 14px/30px $open-sans;
+
+    &--platform {
+      padding: 0 25px;
     }
   }
 
