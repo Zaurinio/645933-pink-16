@@ -9,12 +9,22 @@
 
   &::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 39px;
+    height: 39px;
     border: 2px solid #e5e5e5;
     display: inline-block;
     vertical-align: middle;
     margin-right: 31px;
+  }
+}
+
+.achievements__item {
+  &:hover .achievements__label::before {
+    border-color: #283645;
+  }
+
+  &:active .achievements__label::before {
+    border-color: #d22856;
   }
 }
 
@@ -25,13 +35,25 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .achievements__item {
+    text-align: left;
+  }
+
+  .achievements__label {
+    &::before {
+      margin-right: 21px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .achievements {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    max-height: 120px;
+    max-height: 130px;
     align-content: space-between;
   }
 

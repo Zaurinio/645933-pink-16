@@ -1,7 +1,8 @@
 .photo-banner {
-  margin-top: -66px;
-  background: url("../img/bg-back-mobile@1x.jpg") no-repeat  50% 0;
-  padding: 100px 0 87px;
+  margin-top: -70px;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
+  padding: 100px 0 83px;
+  background-position: 0 0;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -15,7 +16,7 @@
 }
 
 .photo-banner__text {
-  font: 300 24px/24px $open-sans;
+  font: 300 24px/28px $open-sans;
   color: #ffffff;
   text-align: center;
   margin: 0;
@@ -25,8 +26,9 @@
   .photo-banner {
     margin-top: -110px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    padding: 190px 0 150px;
+    padding: 182px 0 141px;
     background-size: 1200px auto;
+    background-position: -270px 0;
 
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -35,7 +37,7 @@
   }
 
   .photo-banner__text {
-    font: 300 50px/50px $open-sans;
+    font: 300 50px/58px $open-sans;
     margin: 0;
   }
 
@@ -45,15 +47,23 @@
 }
 
 @media (min-width: $desktop-width) {
-  .banner {
+  .photo-banner {
     background: url("../img/bg-back-desktop@1x.jpg") 50% 0;
     background-size: 2560px auto;
+    padding: 175px 0 100px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
+  }
 
   .photo-banner__wrapper {
     @include wrapper-dt;
+    padding-left: 290px;
+    padding-right: 290px;
+  }
+
+  .photo-banner__text {
+    font: 300 50px/60px $open-sans;
   }
 }

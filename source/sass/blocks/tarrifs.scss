@@ -34,7 +34,7 @@
 .tariffs__details {
   border: 2px solid #e7e7e7;
   background-color: #ffffff;
-  padding: 14px 24px 16px;
+  padding: 15px 24px 14px;
   font: 400 14px/30px $open-sans;
   color: #283645;
   text-transform: uppercase;
@@ -43,9 +43,10 @@
 .tariffs__header {
   color: #ffffff;
   background-color: #283645;
-  padding: 19px 70px 20px;
+  padding: 16px 70px 21px;
   font: 300 24px/30px $open-sans;
   text-transform: uppercase;
+  position: relative;
 
   &--empty {
     background-color: transparent;
@@ -59,6 +60,7 @@
 .tariffs__header:nth-child(3) {
   border-left: 2px solid #e7e7e7;
   border-right: 2px solid #e7e7e7;
+  // border-top: 2px solid #e7e7e7;
 }
 
 .tariffs__header--empty,
@@ -66,13 +68,39 @@
   display: none;
 }
 
+.tariffs__header--hit {
+  &::before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    display: block;
+    background: url("../img/bg-hit.svg") no-repeat;
+    top: 3px;
+    left: -1px;
+  }
+
+  &::after {
+    content: "ХИТ";
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    display: block;
+    top: 8px;
+    left: 3px;
+    font: 400 14px/30px $open-sans;
+    transform: rotate(-45deg);
+  }
+}
+
 .tariffs__controls {
   position: absolute;
   display: block;
-  bottom: 62px;
+  bottom: 45px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  width: 62px;
 }
 
 .tariffs__button {
@@ -85,12 +113,20 @@
   vertical-align: middle;
 
   &:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 9px;
   }
 
   &--active {
     background-color: transparent;
     border: 3px solid #283645;
+  }
+
+  &:hover {
+    background-color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(40, 54, 69, 0.1);
   }
 }
 
@@ -113,13 +149,13 @@
   &::before {
     content: "";
     width: 27px;
-    height: 26px;
+    height: 27px;
     background: url("../img/icon-no.svg") no-repeat;
     position: absolute;
     display: block;
     top: 50%;
     transform: translateY(-50%);
-    right: 17px;
+    right: 20px;
   }
 }
 
@@ -128,7 +164,7 @@
     @include wrapper-tb;
     margin: 0 auto;
     padding-top: 38px;
-    padding-bottom: 68px;
+    padding-bottom: 69px;
   }
 
   .tariffs__list {
@@ -143,7 +179,8 @@
 
   .tariffs__header {
     font: 300 18px/30px $open-sans;
-    padding: 14px 30px 10px;
+    padding: 12px 31px 8px;
+    width: 154px;
 
     span {
       font: 700 16px/30px $open-sans;
@@ -157,7 +194,7 @@
 
   .tarrifs__type {
     text-transform: none;
-    padding: 9px 15px 7px;
+    padding: 5px 15px 9px 15px;
   }
 
   .tariffs__details span {
@@ -175,19 +212,45 @@
   .tariffs__controls {
     display: none;
   }
+
+  .tariffs__header--hit {
+    &::before {
+      content: "";
+      width: 61px;
+      height: 61px;
+      position: absolute;
+      display: block;
+      background: url("../img/bg-hit-tablet.svg") no-repeat;
+      top: 1px;
+      left: -1px;
+    }
+
+    &::after {
+      content: "ХИТ";
+      width: 61px;
+      height: 61px;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      font: 400 14px/30px $open-sans;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .tariffs__wrapper {
     @include wrapper-dt;
     margin: 0 auto;
-    padding-top: 66px;
+    padding-top: 70px;
     padding-bottom: 95px;
   }
 
   .tariffs__header {
     font: 300 24px/30px $open-sans;
-    padding: 19px 50px 20px;
+    padding: 14px 50px 20px;
+    width: 235px;
 
     span {
       font: 700 18px/30px $open-sans;
@@ -196,6 +259,31 @@
 
   .tarrifs__type {
     font: 400 18px/30px $open-sans;
-    padding: 16px 24px 13px;
+    padding: 13px 22px 15px 22px;
+  }
+
+  .tariffs__header--hit {
+    &::before {
+      content: "";
+      width: 73px;
+      height: 73px;
+      position: absolute;
+      display: block;
+      background: url("../img/bg-hit.svg") no-repeat;
+      top: 0;
+      left: -1px;
+    }
+
+    &::after {
+      content: "ХИТ";
+      width: 73px;
+      height: 73px;
+      position: absolute;
+      display: block;
+      top: 4px;
+      left: 2px;
+      font: 400 14px/30px $open-sans;
+      transform: rotate(-45deg);
+    }
   }
 }

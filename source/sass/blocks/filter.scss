@@ -28,7 +28,7 @@
 }
 
 .filter__settings {
-  padding-bottom: 28px;
+  padding-bottom: 40px;
 }
 
 .filter__slider-container {
@@ -45,28 +45,16 @@
   display: block;
   cursor: pointer;
 
-  &--crop,
+  &--contrast,
   &--fill {
     display: none;
   }
 
-  &--contrast {
+  &--crop {
     position: absolute;
-    bottom: 34px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  &[data-active]::-webkit-slider-thumb {
-    background-color: #d22856;
-  }
-
-  &[data-active]::-moz-range-thumb {
-    background-color: #d22856;
-  }
-
-  &[data-active]::-ms-thumb {
-    background-color: #d22856;
   }
 }
 
@@ -147,7 +135,7 @@
   border: none;
   border-radius: 27px;
   background-color: transparent;
-  padding: 15px 69px 17px;
+  padding: 15px 69px 16px;
   cursor: pointer;
 
   &--post {
@@ -190,16 +178,28 @@
   .filter__slider-box {
     width: 202px;
 
-    &--crop,
+    &--contrast,
     &--fill {
       display: block;
     }
 
-    &--contrast {
+    &--crop {
       position: relative;
       bottom: auto;
       left: auto;
       transform: none;
+    }
+
+    &[data-active]::-webkit-slider-thumb {
+      background-color: #d22856;
+    }
+
+    &[data-active]::-moz-range-thumb {
+      background-color: #d22856;
+    }
+
+    &[data-active]::-ms-thumb {
+      background-color: #d22856;
     }
   }
 
@@ -217,7 +217,11 @@
   .filter__buttons {
     padding-top: 0;
     border-top: none;
+    padding-right: 13px;
+    padding-left: 13px;
+  }
 
+  .filter__button {
     &--post {
       margin-bottom: 24px;
     }
@@ -225,9 +229,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .filter {
+    background-color: #ffffff;
+  }
+
   .filter__wrapper {
-    @include wrapper-dt;
+    width: 940px;
+    margin: 0 auto;
     padding: 43px 60px 57px 80px;
+    background-color: #f2f2f2;
   }
 
   .filter__settings {
@@ -241,13 +251,14 @@
   .filter__buttons {
     display: flex;
     justify-content: space-between;
+    padding: 0;
   }
 
   .filter__button {
     width: 0;
     min-width: 183px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 32px;
+    padding-right: 28px;
 
     &--post {
       margin-bottom: 0;

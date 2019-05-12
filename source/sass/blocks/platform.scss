@@ -5,18 +5,29 @@
 .platform__label {
   font: 400 18px/30px $open-sans;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
 
   &::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border: 2px solid #e5e5e5;
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 31px;
+    margin-right: 28px;
     background-color: #ffffff;
+  }
+}
+
+.platform__item {
+  &:hover .platform__label::before {
+    border-color: #283645;
+  }
+
+  &:active .platform__label::before {
+    border-color: #d22856;
   }
 }
 
@@ -24,5 +35,23 @@
   &::before {
     background: url("../img/icon-map-marker.svg") no-repeat;
     background-position: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .platform__item:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  .platform__label {
+    &::before {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .platform {
+    padding-left: 43px;
   }
 }

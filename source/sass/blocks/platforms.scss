@@ -3,3 +3,25 @@
   vertical-align: top;
   max-width: 100%;
 }
+
+.platforms__image {
+  &--android {
+    padding-bottom: 1px;
+  }
+
+  &--windows {
+    padding-bottom: 3px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .platforms__image {
+    &--android {
+      padding-bottom: 3px;
+    }
+
+    &--windows {
+      padding-bottom: 3px;
+    }
+  }
+}

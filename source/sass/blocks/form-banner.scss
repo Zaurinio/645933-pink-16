@@ -1,7 +1,7 @@
 .form-banner {
-  margin-top: -66px;
+  margin-top: -70px;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat  50% 0;
-  padding: 102px 0 59px;
+  padding: 100px 0 52px;
   background-size: cover;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .form-banner__text {
-  font: 300 24px/24px $open-sans;
+  font: 300 24px/29px $open-sans;
   color: #ffffff;
   text-align: center;
   margin: 0;
@@ -21,11 +21,11 @@
   .form-banner {
     margin-top: -110px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
-    padding: 190px 0 150px;
+    padding: 180px 0 80px;
   }
 
   .form-banner__text {
-    font: 300 50px/50px $open-sans;
+    font: 300 50px/60px $open-sans;
     margin: 0;
   }
 
@@ -37,6 +37,7 @@
 @media (min-width: $desktop-width) {
   .form-banner {
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
+    padding: 175px 0 100px;
   }
 
   .form-banner__wrapper {

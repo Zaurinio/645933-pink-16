@@ -3,15 +3,15 @@
   font: 400 14px/30px $open-sans;
   color: #d22856;
   text-transform: uppercase;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   padding-left: 23px;
   vertical-align: middle;
 }
 
-.enquiry__text {
+.enquiry__input {
   font: 400 18px/30px $open-sans;
   border: 2px solid #e5e5e5;
-  padding: 17px 20px 13px;
+  padding: 14px 20px 14px;
   width: 100%;
 
   &::placeholder {
@@ -34,48 +34,85 @@
   }
 
   .enquiry__item:not(:last-child) {
-    margin-bottom: 31px;
+    margin-bottom: 28px;
   }
 
   .enquiry__label {
     margin: 0;
     margin-right: 20px;
     order: 1;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .enquiry__input {
+    padding: 12px 18px 12px;
   }
 
   .enquiry__container {
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding: 0;
     display: flex;
     position: relative;
 
     &--phone {
+      &::before {
+        content: "";
+        width: 20px;
+        height: 19px;
+        background-image: url("../img/icon-phone.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        display: block;
+        top: 22px;
+        right: 22px;
+        z-index: 10;
+      }
+
       &::after {
         content: "";
-        width: 64px;
+        width: 69px;
         height: 64px;
         display: inline-block;
-        background: url("../img/icon-phone.svg") no-repeat;
-        background-size: 20px 19px;
         background-color: #e5e5e5;
-        background-position: 18px 22px;
         position: relative;
       }
     }
 
     &--mail {
+      &::before {
+        content: "";
+        width: 18px;
+        height: 13px;
+        background-image: url("../img/icon-mail.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        display: block;
+        top: 25px;
+        right: 24px;
+        z-index: 10;
+      }
+
+
       &::after {
         content: "";
-        width: 64px;
+        width: 69px;
         height: 64px;
         display: inline-block;
-        background: url("../img/icon-mail.svg") no-repeat;
-        background-size: 18px 13px;
         background-color: #e5e5e5;
-        background-position: 19px 25px;
         position: relative;
       }
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .enquiry__input {
+    padding: 11px 18px 11px;
+  }
+
+  .enquiry__item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
