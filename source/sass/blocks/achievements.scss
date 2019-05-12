@@ -1,0 +1,73 @@
+.achievements__item:not(:last-child) {
+  margin-bottom: 43px;
+}
+
+.achievements__label {
+  font: 400 18px/30px $open-sans;
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    width: 39px;
+    height: 39px;
+    border: 2px solid #e5e5e5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 31px;
+  }
+}
+
+.achievements__item {
+  &:hover .achievements__label::before {
+    border-color: #283645;
+  }
+
+  &:active .achievements__label::before {
+    border-color: #d22856;
+  }
+}
+
+.achievements__checkbox:checked ~ .achievements__label {
+  &::before {
+    background: url("../img/icon-yes-red.svg") no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .achievements__item {
+    text-align: left;
+  }
+
+  .achievements__label {
+    &::before {
+      margin-right: 21px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .achievements {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-height: 130px;
+    align-content: space-between;
+  }
+
+  .achievements__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .achievements__label {
+    &::before {
+      margin-right: 21px;
+    }
+  }
+
+  .achievements__item:not(:nth-child(2n)) {
+    margin-bottom: 43px;
+  }
+}

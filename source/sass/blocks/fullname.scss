@@ -1,0 +1,56 @@
+.fullname__label {
+  display: block;
+  font: 400 14px/30px $open-sans;
+  color: #d22856;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding-left: 23px;
+  vertical-align: middle;
+}
+
+.fullname__input {
+  font: 400 18px/30px $open-sans;
+  border: 2px solid #e5e5e5;
+  padding: 14px 20px 14px;
+  width: 100%;
+
+  &::placeholder {
+    color: #283645;
+  }
+}
+
+.fullname__item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .fullname__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fullname__item:not(:last-child) {
+    margin-bottom: 53px;
+  }
+
+  .fullname__label {
+    padding: 0;
+    margin: 0;
+    margin-right: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fullname {
+    padding-top: 18px;
+  }
+
+  .fullname__item:not(:last-child) {
+    margin-bottom: 54px;
+  }
+
+  .fullname__input {
+    padding: 14px 20px 15px;
+  }
+}

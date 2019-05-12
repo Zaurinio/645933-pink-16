@@ -1,0 +1,118 @@
+.enquiry__label {
+  display: block;
+  font: 400 14px/30px $open-sans;
+  color: #d22856;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  padding-left: 23px;
+  vertical-align: middle;
+}
+
+.enquiry__input {
+  font: 400 18px/30px $open-sans;
+  border: 2px solid #e5e5e5;
+  padding: 14px 20px 14px;
+  width: 100%;
+
+  &::placeholder {
+    color: #283645;
+  }
+}
+
+.enquiry__container {
+  display: block;
+}
+
+.enquiry__item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+@media (min-width: $tablet-width) {
+  .enquiry__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .enquiry__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .enquiry__label {
+    margin: 0;
+    margin-right: 20px;
+    order: 1;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .enquiry__input {
+    padding: 12px 18px 12px;
+  }
+
+  .enquiry__container {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    position: relative;
+
+    &--phone {
+      &::before {
+        content: "";
+        width: 20px;
+        height: 19px;
+        background-image: url("../img/icon-phone.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        display: block;
+        top: 22px;
+        right: 22px;
+        z-index: 10;
+      }
+
+      &::after {
+        content: "";
+        width: 69px;
+        height: 64px;
+        display: inline-block;
+        background-color: #e5e5e5;
+        position: relative;
+      }
+    }
+
+    &--mail {
+      &::before {
+        content: "";
+        width: 18px;
+        height: 13px;
+        background-image: url("../img/icon-mail.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        display: block;
+        top: 25px;
+        right: 24px;
+        z-index: 10;
+      }
+
+
+      &::after {
+        content: "";
+        width: 69px;
+        height: 64px;
+        display: inline-block;
+        background-color: #e5e5e5;
+        position: relative;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .enquiry__input {
+    padding: 11px 18px 11px;
+  }
+
+  .enquiry__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

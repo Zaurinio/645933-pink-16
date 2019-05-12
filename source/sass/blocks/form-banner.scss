@@ -1,0 +1,46 @@
+.form-banner {
+  margin-top: -70px;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat  50% 0;
+  padding: 100px 0 52px;
+  background-size: cover;
+}
+
+.form-banner__wrapper {
+  @include wrapper-mb;
+  margin: 0 auto;
+}
+
+.form-banner__text {
+  font: 300 24px/29px $open-sans;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .form-banner {
+    margin-top: -110px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
+    padding: 180px 0 80px;
+  }
+
+  .form-banner__text {
+    font: 300 50px/60px $open-sans;
+    margin: 0;
+  }
+
+  .form-banner__wrapper {
+    @include wrapper-tb;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-banner {
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
+    padding: 175px 0 100px;
+  }
+
+  .form-banner__wrapper {
+    @include wrapper-dt;
+  }
+}

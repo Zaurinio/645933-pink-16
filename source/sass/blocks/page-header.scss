@@ -18,14 +18,13 @@
   border-bottom: 1px solid #000000;
   margin: 0 -20px;
   padding: 0 20px;
-  height: 66px;
+  height: 70px;
   z-index: 5;
 }
 
 .main-navigation--closed ~ .page-header__top {
   border-bottom: none;
 }
-
 
 .page-header__logo {
   vertical-align: top;
@@ -62,7 +61,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
-  margin-top: 21px;
+  margin-top: 20px;
 }
 
 .main-navigation--closed ~ .page-header__top .page-header__toggle::before {
@@ -87,8 +86,8 @@
 }
 
 .main-navigation--opened ~ .page-header__top .page-header__toggle {
-  width: 23px;
-  height: 23px;
+  width: 26px;
+  height: 26px;
 
   &::before,
   &::after {
@@ -96,8 +95,8 @@
     top: 12px;
     left: 0;
     position: absolute;
-    width: 22px;
-    height: 4px;
+    width: 28px;
+    height: 5px;
     background-color: #ffffff;
   }
 

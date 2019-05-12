@@ -1,0 +1,275 @@
+.filter {
+  background-color: #f2f2f2;
+}
+
+.filter__wrapper {
+  @include wrapper-mb;
+  padding-top: 20px;
+}
+
+.filter__list {
+  list-style: none;
+  margin-bottom: 33px;
+  position: relative;
+
+  @include space-reset;
+}
+
+.filter__picture {
+  display: block;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+
+.filter__picture img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.filter__settings {
+  padding-bottom: 40px;
+}
+
+.filter__slider-container {
+  padding-bottom: 34px;
+}
+
+.filter__slider-box {
+  appearance: none;
+  width: 100%;
+  height: 22px;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+
+  &--contrast,
+  &--fill {
+    display: none;
+  }
+
+  &--crop {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// Стилизация ползунка для Chrome
+
+.filter__slider-box::-webkit-slider-runnable-track {
+  border: none;
+  height: 2px;
+  background-color: #283645;
+}
+
+.filter__slider-box::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  margin-top: -6px;
+
+  &[data-active] {
+    background-color: #d22856;
+  }
+}
+
+// Стилизация ползунка для Mozilla
+
+.filter__slider-box::-moz-range-track {
+  border: none;
+  height: 2px;
+  background-color: #283645;
+}
+
+.filter__slider-box::-moz-range-thumb {
+  // -moz-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+// Стилизация ползунка для IE11
+.filter__slider-box::-ms-track {
+  height: 2px;
+  background-color: transparent;
+  color: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+}
+
+.filter__slider-box::-ms-fill-lower {
+  background-color: #283645;
+}
+
+.filter__slider-box::-ms-fill-upper {
+  background-color: #283645;
+}
+
+.filter__slider-box::-ms-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.filter__buttons {
+  padding-top: 38px;
+  border-top: 1px solid rgba(40, 54, 69, 0.1);
+}
+
+.filter__button {
+  display: block;
+  width: 100%;
+  font: 700 18px/18px $open-sans;
+  border: none;
+  border-radius: 27px;
+  background-color: transparent;
+  padding: 15px 69px 16px;
+  cursor: pointer;
+
+  &--post {
+    border: 3px solid #d22856;
+    margin-bottom: 12px;
+    color: #d22856;
+  }
+
+  &--cancel {
+    border: 3px solid rgba(40, 54, 69, 0.1);
+    color: rgba(40, 54, 69, 0.1);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter__wrapper {
+    @include wrapper-tb;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 39px;
+    padding-bottom: 54px;
+  }
+
+  .filter__settings {
+    width: 286px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .filter__list {
+    margin-bottom: 0;
+  }
+
+  .filter__slider-container {
+    display: none;
+  }
+
+  .filter__slider-box {
+    width: 202px;
+
+    &--contrast,
+    &--fill {
+      display: block;
+    }
+
+    &--crop {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      transform: none;
+    }
+
+    &[data-active]::-webkit-slider-thumb {
+      background-color: #d22856;
+    }
+
+    &[data-active]::-moz-range-thumb {
+      background-color: #d22856;
+    }
+
+    &[data-active]::-ms-thumb {
+      background-color: #d22856;
+    }
+  }
+
+  .filter__picture {
+    flex-shrink: 0;
+    margin-bottom: 0;
+    padding-top: 18px;
+
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+
+  .filter__buttons {
+    padding-top: 0;
+    border-top: none;
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .filter__button {
+    &--post {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    background-color: #ffffff;
+  }
+
+  .filter__wrapper {
+    width: 940px;
+    margin: 0 auto;
+    padding: 43px 60px 57px 80px;
+    background-color: #f2f2f2;
+  }
+
+  .filter__settings {
+    width: 410px;
+  }
+
+  // .filter__list {
+  //   margin-bottom: 145px;
+  // }
+
+  .filter__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .filter__button {
+    width: 0;
+    min-width: 183px;
+    padding-left: 32px;
+    padding-right: 28px;
+
+    &--post {
+      margin-bottom: 0;
+    }
+  }
+
+  .filter__slider-box {
+    width: 288px;
+  }
+
+  .filter__picture {
+    padding-top: 14px;
+  }
+}

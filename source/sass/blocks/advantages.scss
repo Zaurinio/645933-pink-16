@@ -1,5 +1,9 @@
 .advantages__item {
-  margin-bottom: 42px;
+  margin-bottom: 34px;
+
+  &--friendship {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__title {
@@ -12,20 +16,32 @@
   margin: 0;
 }
 
-@media (min-width: $tablet-width) {
-  .advantages__item--friendship {
-    margin-bottom: 0;
-  }
+.advantages__breaker {
+  display: none;
+}
 
+@media (min-width: $tablet-width) {
   .advantages__title {
     color: #000000;
+  }
+
+  .advantages__item {
+    margin-bottom: 37px;
+
+    &--friendship {
+      margin-bottom: 0;
+    }
+  }
+
+  .advantages__breaker {
+    display: inline;
   }
 }
 
 @media (min-width: $desktop-width) {
   .advantages__item {
     position: relative;
-    max-width: 292px;
+    max-width: 300px;
     margin-bottom: 0;
 
     &::before {
@@ -34,7 +50,7 @@
       height: 302px;
       display: block;
       margin: 0 auto;
-      margin-bottom: 60px;
+      margin-bottom: 57px;
     }
 
     &--mood {
@@ -50,7 +66,7 @@
 
     &--modify {
       &::before {
-        background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat;
+        background: url("../img/iphone-screen-2-desktop@1x.png") no-repeat 3px 0;
         background-size: 292px 302px;
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -61,7 +77,7 @@
 
     &--friendship {
       &::before {
-        background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
+        background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat 4px 0;
         background-size: 292px 302px;
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -73,12 +89,24 @@
 
   .advantages__title {
     font: 700 30px/1 $open-sans;
-    margin-bottom: 25px;
-    padding: 0 26px;
+    margin-bottom: 24px;
+    padding: 0 39px;
   }
 
   .advantages__description {
     font: 400 18px/30px $open-sans;
-    padding: 0 26px;
+    padding: 0 25px;
+
+    &--modify {
+      padding: 0 25px;
+    }
+
+    &--friendship {
+      padding: 0 26px;
+    }
+  }
+
+  .advantages__breaker {
+    display: none;
   }
 }
