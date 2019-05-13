@@ -183,6 +183,10 @@
   color: #d22856;
 }
 
+.questionnaire__roll-out {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .questionnaire__form {
     justify-content: space-between;
@@ -297,6 +301,7 @@
 @media (min-width: $desktop-width) {
   .questionnaire__wrapper {
     @include wrapper-dt;
+    padding-bottom: 0;
   }
 
   .questionnaire__form {
@@ -310,7 +315,7 @@
   .questionnaire__group {
     &--emotions {
       width: 100%;
-      padding: 27px 58px 51px;
+      padding: 30px 58px 47px;
     }
 
     &--achievements {
@@ -366,7 +371,7 @@
 
   .questionnaire__text-field {
     height: 124px;
-    padding: 13px 19px 25px;
+    padding: 13px 19px 30px;
   }
 
   .questionnaire__roll-out {
