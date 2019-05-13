@@ -208,12 +208,17 @@
 @media (min-width: $desktop-width) {
   .main-footer__wrapper {
     @include wrapper-dt;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 55px;
+    padding-bottom: 87px;
 
-    &--desktop {
-      padding-top: 85px;
+    &--form {
+      padding-top: 52px;
       padding-bottom: 72px;
+    }
+
+    &--photo {
+      padding-top: 85px;
+      padding-bottom: 87px;
     }
   }
 
