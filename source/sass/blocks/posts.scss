@@ -66,6 +66,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .posts__item {
+    display: flex;
+    flex-direction: column;
+  }
+
   .posts__item:nth-child(2n) {
     margin-right: 20px;
   }
@@ -93,6 +98,10 @@
       flex-direction: row;
       min-height: 120px;
     }
+  }
+
+  .posts__blockquote {
+    width: 100%;
   }
 
   .posts__content-wrapper {

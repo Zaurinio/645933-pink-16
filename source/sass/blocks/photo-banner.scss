@@ -4,6 +4,7 @@
   padding: 100px 0 83px;
   background-position: 0 0;
   background-size: cover;
+  background-color: $downloading-bg;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");

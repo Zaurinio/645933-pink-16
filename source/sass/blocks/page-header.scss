@@ -52,7 +52,6 @@
 }
 
 .page-header__toggle {
-  display: block;
   position: relative;
   top: 0;
   right: 0;
@@ -62,6 +61,14 @@
   border: none;
   padding: 0;
   margin-top: 20px;
+
+  &--avialable {
+    display: block;
+  }
+
+  &--disabled {
+    display: none;
+  }
 }
 
 .main-navigation--closed ~ .page-header__top .page-header__toggle::before {
@@ -211,5 +218,11 @@
     padding: 0;
     height: 69px;
     width: 320px;
+  }
+
+  .main-navigation--opened {
+    &::before {
+      display: none;
+    }
   }
 }
