@@ -144,6 +144,7 @@
   border: 2px solid #e5e5e5;
   padding: 15px 19px 31px;
   display: block;
+  overflow: hidden;
 
   &::placeholder {
     font: 400 18px/30px $open-sans;
@@ -266,15 +267,15 @@
     &--achievements,
     &--platform {
       padding: 0 31px;
-      margin: 0;
+      margin: 0 auto;
       float: none;
     }
 
     &--enquiry,
     &--emotions {
-      display: inline;
+      display: block;
       padding: 0 32px;
-      margin: 0;
+      margin: 0 auto;
       float: none;
       width: auto;
     }

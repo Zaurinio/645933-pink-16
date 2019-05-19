@@ -51,6 +51,10 @@
 //   max-width: 100%;
 // }
 
+.main-footer__logo-image {
+  pointer-events: none;
+}
+
 .main-footer__logo-image--desktop {
   display: none;
 }
@@ -75,6 +79,7 @@
   align-items: center;
   margin-bottom: 39px;
 
+
   // &--twitter {
   //   padding: 16px 13px 15px 14px;
   // }
@@ -93,6 +98,15 @@
 
   &:active {
     border-color: rgba(64, 76, 89, 0.1);
+  }
+
+  &:active svg {
+    fill: rgba(210, 40, 86, 0.3);
+  }
+
+  svg {
+    pointer-events: none;
+    fill: #d22856;
   }
 }
 
@@ -137,12 +151,14 @@
 .main-footer__developer-link {
   display: inline-block;
 
+
   svg {
     vertical-align: top;
     max-width: 100%;
     fill: #d22856;
     width: 27px;
     height: 34px;
+    pointer-events: none;
   }
 
   &:hover svg {

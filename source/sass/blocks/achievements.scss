@@ -53,9 +53,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    max-height: 130px;
+    height: 130px;
     align-content: space-between;
   }
+
+  // .achievements__item:nth-child(2n) {
+  //   order: 1;
+  // }
 
   .achievements__item:not(:last-child) {
     margin-bottom: 0;
